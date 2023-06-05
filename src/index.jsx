@@ -4,75 +4,68 @@ import './style.css';
 
 import logo from './img/logo.png';
 import rabbitImage from './img/rabbit_new.png';
+import cageImage from './img/cage.png'
+
+const NavLink = ({ href, text }) => {
+  return (
+    <a className="navlink" href={href}>
+      {text}
+    </a>
+  );
+};
+
+const ThemeSwitch = () => {
+  return (
+    <div className="theme-switch-wrapper">
+      <span>Switch to the dark mode</span>
+      <label className="theme-switch" htmlFor="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div className="slider round"></div>
+      </label>
+    </div>
+  );
+};
+
+const RunningLine = ({ speed }) => {
+  return (
+    <p className="running-line">
+      <span className={`running-line-text speed${speed}`}>
+        this project aims to increase awareness about animal testing 3 this
+        project aims to increase awareness about animal testing&nbsp;
+      </span>
+      <span className={`running-line-text speed${speed + 1}`}>
+        this project aims to increase awareness about animal testing 3 this
+        project aims to increase awareness about animal testing&nbsp;
+      </span>
+    </p>
+  );
+};
 
 const App = () => {
   return (
     <>
       <header className="page-header">
         <nav>
-          <a className="navlink" href="#Home">
-            Home
-          </a>
-          <a className="navlink" href="#about projekt">
-            About
-          </a>
+          <NavLink href="#Home" text="Home" />
+          <NavLink href="#about" text="About" />
         </nav>
         <div className="logo">
           <img src={logo} alt="positive choice logo" />
         </div>
-        <div className="theme-switch-wrapper">
-          <span>Switch to the dark mode</span>
-          <label className="theme-switch" htmlFor="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div className="slider round"></div>
-          </label>
-        </div>
+        <ThemeSwitch />
       </header>
       <main>
         {/* RUNNING LINE */}
         <div className="running-line-container">
-          <p className="running-line">
-            <span className="running-line-text speed1">
-            this project aims to increase awareness about animal testing 3 this
-            project aims to increase awareness about animal testing&nbsp;
-            </span>
-            <span className="running-line-text speed2">
-            this project aims to increase awareness about animal testing 3 this
-            project aims to increase awareness about animal testing&nbsp;
-            </span>
-          </p>
-          <p className="running-line">
-            <span className="running-line-text speed3">
-            this project aims to increase awareness about animal testing 3 this
-            project aims to increase awareness about animal testing&nbsp;
-            </span>
-            <span className="running-line-text speed4">
-            this project aims to increase awareness about animal testing 3 this
-            project aims to increase awareness about animal testing&nbsp;
-            </span>
-          </p>
-          <p className="running-line">
-            <span className="running-line-text speed5">
-            this project aims to increase awareness about animal testing 3 this
-            project aims to increase awareness about animal testing&nbsp;
-            </span>
-            <span className="running-line-text speed6">
-            this project aims to increase awareness about animal testing 3 this
-            project aims to increase awareness about animal testing&nbsp;
-            </span>
-          </p>
-          <p className="running-line">
-            <span className="running-line-text speed7">
-            this project aims to increase awareness about animal testing 3 this
-            project aims to increase awareness about animal testing&nbsp;
-            </span>
-            <span className="running-line-text speed8">
-            this project aims to increase awareness about animal testing 3 this
-            project aims to increase awareness about animal testing&nbsp;
-            </span>
-          </p>
+          <RunningLine speed={1} />
+          <RunningLine speed={3} />
+          <RunningLine speed={5} />
+          <RunningLine speed={7} />
           <div className="intro-img">
-            <img src={rabbitImage} alt="Intro Image" />
+            <img className="rabbit-img" src={rabbitImage} alt="Rabbit" />
+          </div>
+          <div className="intro-img-top">
+            <img className="cage-img" src={cageImage} alt="Cage" />
           </div>
         </div>
       </main>

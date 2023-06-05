@@ -142,3 +142,40 @@ nav {
   width: 75vw;
   object-fit: cover;
 }
+
+.intro-img,
+.intro-img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-img-top {
+  z-index: 1;
+}
+
+.rabbit-img {
+  width: 75vw;
+  object-fit: cover;
+}
+
+.cage-img {
+  height: 100%; 
+  object-fit: cover; 
+  object-position: center center;
+  animation: slideFromTop 2s ease-in-out forwards;
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
