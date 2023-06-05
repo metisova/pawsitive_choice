@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*,
+body,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ebebeb;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* HLAVIČKA - NAVIGACE */
+
+.page-header {
+  padding: 2rem 4rem;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navlink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #242223;
+  padding: 1rem;
+}
+
+/* RUNNING LINE */
+
+.running-line-container {
+  height: 90vh - 2rem;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 0;
+}
+
+.running-line {
+  width: max-content;
+  margin: 0 auto;
+  font-size: 17vh;
+  white-space: nowrap;
+  position: relative;
+  color: #a5a5a5;
+  font-weight: bold;
+}
+
+.running-line-text {
+  display: inline-block;
+}
+
+.speed1 {
+  animation: running-line-animation1 160s linear infinite;
+  animation-delay: -80s;
+}
+
+.speed2 {
+  animation: running-line-animation2 160s linear infinite;
+  animation-delay: 0s;
+}
+
+.speed3 {
+  animation: running-line-animation1 194s linear infinite;
+  animation-delay: -97s;
+}
+
+.speed4 {
+  animation: running-line-animation2 194s linear infinite;
+  animation-delay: 0s;
+}
+
+.speed5 {
+  animation: running-line-animation1 180s linear infinite;
+  animation-delay: -90s;
+}
+
+.speed6 {
+  animation: running-line-animation2 180s linear infinite;
+  animation-delay: 0s;
+}
+
+.speed7 {
+  animation: running-line-animation1 210s linear infinite;
+  animation-delay: -105s;
+}
+
+.speed8 {
+  animation: running-line-animation2 210s linear infinite;
+  animation-delay: 0s;
+}
+
+@keyframes running-line-animation1 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes running-line-animation2 {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+/* MAIN PIC */
+
+.intro-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro-img img {
+  width: 75vw;
+  object-fit: cover;
+}
