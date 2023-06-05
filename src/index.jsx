@@ -33,48 +33,42 @@ const App = () => {
         <div className="running-line-container">
           <p className="running-line">
             <span className="running-line-text speed1">
-              this project aims to increase awareness about animal testing 1
-              this project aims to increase awareness about animal testing
-              2&nbsp;
+            this project aims to increase awareness about animal testing 3 this
+            project aims to increase awareness about animal testing&nbsp;
             </span>
             <span className="running-line-text speed2">
-              this project aims to increase awareness about animal testing 3
-              this project aims to increase awareness about animal testing
-              4&nbsp;
+            this project aims to increase awareness about animal testing 3 this
+            project aims to increase awareness about animal testing&nbsp;
             </span>
           </p>
           <p className="running-line">
             <span className="running-line-text speed3">
-              this project aims to increase awareness about animal testing 1
-              this project aims to increase awareness about animal testing
-              2&nbsp;
+            this project aims to increase awareness about animal testing 3 this
+            project aims to increase awareness about animal testing&nbsp;
             </span>
             <span className="running-line-text speed4">
-              this project aims to increase awareness about animal testing 3
-              this project aims to increase awareness about animal testing
-              4&nbsp;
+            this project aims to increase awareness about animal testing 3 this
+            project aims to increase awareness about animal testing&nbsp;
             </span>
           </p>
           <p className="running-line">
             <span className="running-line-text speed5">
-              this project aims to increase awareness about animal testing 1
-              this project aims to increase awareness about animal testing
-              2&nbsp;
+            this project aims to increase awareness about animal testing 3 this
+            project aims to increase awareness about animal testing&nbsp;
             </span>
             <span className="running-line-text speed6">
-              this project aims to increase awareness about animal testing 3
-              this project aims to increase awareness about animal testing
-              4&nbsp;
+            this project aims to increase awareness about animal testing 3 this
+            project aims to increase awareness about animal testing&nbsp;
             </span>
           </p>
           <p className="running-line">
             <span className="running-line-text speed7">
-              this project aims to increase awareness about animal testing 1
-              this project aims to increase awareness about animal testing 2
+            this project aims to increase awareness about animal testing 3 this
+            project aims to increase awareness about animal testing&nbsp;
             </span>
             <span className="running-line-text speed8">
-              this project aims to increase awareness about animal testing 3
-              this project aims to increase awareness about animal testing 4
+            this project aims to increase awareness about animal testing 3 this
+            project aims to increase awareness about animal testing&nbsp;
             </span>
           </p>
           <div className="intro-img">

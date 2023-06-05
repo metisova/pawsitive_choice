@@ -37,7 +37,6 @@ nav {
 .navlink {
   text-decoration: none;
   font-size: 1.2rem;
-  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   color: #242223;
   padding: 1rem;
@@ -46,7 +45,7 @@ nav {
 /* RUNNING LINE */
 
 .running-line-container {
-  height: 90vh - 2rem;
+  height: calc(90vh - 2rem);
   width: 100vw;
   overflow: hidden;
   display: flex;
@@ -77,7 +76,6 @@ nav {
 
 .speed2 {
   animation: running-line-animation2 160s linear infinite;
-  animation-delay: 0s;
 }
 
 .speed3 {
@@ -87,7 +85,6 @@ nav {
 
 .speed4 {
   animation: running-line-animation2 194s linear infinite;
-  animation-delay: 0s;
 }
 
 .speed5 {
@@ -97,7 +94,6 @@ nav {
 
 .speed6 {
   animation: running-line-animation2 180s linear infinite;
-  animation-delay: 0s;
 }
 
 .speed7 {
@@ -107,7 +103,6 @@ nav {
 
 .speed8 {
   animation: running-line-animation2 210s linear infinite;
-  animation-delay: 0s;
 }
 
 @keyframes running-line-animation1 {
