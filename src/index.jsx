@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 
 import logo from './img/logo.png';
 import rabbitImage from './img/rabbit_new.png';
-import cageImage from './img/cage.png'
+import cageImage from './img/cage.png';
 
 const NavLink = ({ href, text }) => {
   return (
@@ -42,6 +42,16 @@ const RunningLine = ({ speed }) => {
 };
 
 const App = () => {
+  const [cage, setCage] = useState(false);
+
+  const handleRabbitClick = () => {
+    setCage(true);
+  };
+
+  const handleCageClick = () => {
+    setCage(false);
+  };
+
   return (
     <>
       <header className="page-header">
@@ -62,11 +72,23 @@ const App = () => {
           <RunningLine speed={5} />
           <RunningLine speed={7} />
           <div className="intro-img">
-            <img className="rabbit-img" src={rabbitImage} alt="Rabbit" />
+            <img
+              className="rabbit-img"
+              src={rabbitImage}
+              alt="Rabbit"
+              onClick={handleRabbitClick}
+            />
           </div>
-          <div className="intro-img-top">
-            <img className="cage-img" src={cageImage} alt="Cage" />
-          </div>
+          {cage && (
+            <div className="intro-img-top">
+              <img
+                className="cage-img"
+                src={cageImage}
+                alt="Cage"
+                onClick={handleCageClick}
+              />
+            </div>
+          )}
         </div>
       </main>
     </>
