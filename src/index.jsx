@@ -17,7 +17,7 @@ const NavLink = ({ href, text }) => {
 const ThemeSwitch = () => {
   return (
     <div className="theme-switch-wrapper">
-      <span>Switch to the dark mode</span>
+      <span className="theme-switch-text">Switch to dark mode</span>
       <label className="theme-switch" htmlFor="checkbox">
         <input type="checkbox" id="checkbox" />
         <div className="slider round"></div>
@@ -55,7 +55,7 @@ const App = () => {
   return (
     <>
       <header className="page-header">
-        <nav>
+        <nav className='navlink-wrapper'>
           <NavLink href="#Home" text="Home" />
           <NavLink href="#about" text="About" />
         </nav>

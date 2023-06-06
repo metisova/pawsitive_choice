@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* BASIC STYLES */
+
 *,
 body,
 ::before,
@@ -18,19 +20,19 @@ html {
   scroll-behavior: smooth;
 }
 
-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 /* HLAVIČKA - NAVIGACE */
 
 .page-header {
-  padding: 2rem 4rem;
-  padding-bottom: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 0;
+}
+
+.navlink-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -40,13 +42,88 @@ nav {
   text-transform: uppercase;
   color: #242223;
   padding: 1rem;
+  margin-right: 1rem;
+}
+
+.navlink:hover {
+  border-top: 2px solid #242223;
+}
+
+.logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+/*TOGGLE SWITCH STYLES*/
+.theme-switch-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.theme-switch-text {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 28px;
+  position: relative;
+  width: 45px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #c8c8c8;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: '';
+  height: 20px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 20px;
+}
+
+input:checked+.slider {
+  background-color: #62b283;
+}
+
+input:checked+.slider:before {
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 /* RUNNING LINE */
 
 .running-line-container {
-  height: calc(90vh - 2rem);
-  width: 100vw;
+  height: calc(90% - 2rem);
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -128,22 +205,6 @@ nav {
 
 /* MAIN PIC */
 
-.intro-img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.intro-img img {
-  width: 75vw;
-  object-fit: cover;
-}
-
 .intro-img,
 .intro-img-top {
   position: absolute;
@@ -161,13 +222,16 @@ nav {
 }
 
 .rabbit-img {
-  width: 75vw;
-  object-fit: cover;
+  width: auto;
+  height: 90vh;
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .cage-img {
-  height: 100%; 
-  object-fit: cover; 
+  height: 100%;
+  object-fit: cover;
   object-position: center center;
   animation: slideFromTop 2s ease-in-out forwards;
 }
@@ -176,6 +240,7 @@ nav {
   0% {
     transform: translateY(-100%);
   }
+
   100% {
     transform: translateY(0);
   }
