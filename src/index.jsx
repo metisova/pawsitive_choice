@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
 
 import logo from './img/logo.png';
+import logoWhite from './img/logo-white.png';
 import rabbitImage from './img/rabbit_new.png';
 import cageImage from './img/cage.png';
 
@@ -14,12 +15,19 @@ const NavLink = ({ href, text }) => {
   );
 };
 
-const ThemeSwitch = () => {
+const ThemeSwitch = ({ darkMode, handleThemeChange }) => {
   return (
     <div className="theme-switch-wrapper">
-      <span className="theme-switch-text">Switch to dark mode</span>
+      <span className="theme-switch-text">
+        {darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+      </span>
       <label className="theme-switch" htmlFor="checkbox">
-        <input type="checkbox" id="checkbox" />
+        <input
+          type="checkbox"
+          id="checkbox"
+          onChange={handleThemeChange}
+          checked={darkMode}
+        />
         <div className="slider round"></div>
       </label>
     </div>
@@ -43,26 +51,49 @@ const RunningLine = ({ speed }) => {
 
 const App = () => {
   const [cage, setCage] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
   const handleRabbitClick = () => {
     setCage(true);
+    setDarkMode(true);
   };
 
   const handleCageClick = () => {
     setCage(false);
+    setDarkMode(false);
   };
+
+  const handleThemeChange = (e) => {
+    setDarkMode(e.target.checked);
+    setCage(!cage);
+  };
+
+  const switchTheme = () => {
+    if (darkMode) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  };
+
+  useEffect(() => {
+    switchTheme();
+  }, [darkMode]);
 
   return (
     <>
       <header className="page-header">
-        <nav className='navlink-wrapper'>
+        <nav className="navlink-wrapper">
           <NavLink href="#Home" text="Home" />
           <NavLink href="#about" text="About" />
         </nav>
         <div className="logo">
-          <img src={logo} alt="positive choice logo" />
+          <img src={darkMode ? logoWhite : logo} alt="positive choice logo" />
         </div>
-        <ThemeSwitch />
+        <ThemeSwitch
+          darkMode={darkMode}
+          handleThemeChange={handleThemeChange}
+        />
       </header>
       <main>
         {/* RUNNING LINE */}

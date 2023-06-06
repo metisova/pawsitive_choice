@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+/* CSS VARIABLES */
+
+:root {
+  --background-main: #ebebeb;
+  --text: #242223;
+  --text-running: #a5a5a5;
+}
+
+:root[data-theme='dark'] {
+--background-main: #2a2a2a;
+--text: #a6a6a6;
+--text-running: #a5a5a5;
+}
+
 /* BASIC STYLES */
 
 *,
@@ -12,7 +26,7 @@ body,
 }
 
 body {
-  background-color: #ebebeb;
+  background-color: var(--background-main);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -40,13 +54,13 @@ html {
   text-decoration: none;
   font-size: 1.2rem;
   text-transform: uppercase;
-  color: #242223;
+  color: var(--text);
   padding: 1rem;
   margin-right: 1rem;
 }
 
 .navlink:hover {
-  border-top: 2px solid #242223;
+  border-bottom: 2px solid var(--text);
 }
 
 .logo {
@@ -67,7 +81,8 @@ html {
 .theme-switch-text {
   margin-right: 0.5rem;
   font-size: 1rem;
-  font-style: italic;
+  text-transform: lowercase;
+  color: var(--text);
 }
 
 .theme-switch {
@@ -82,7 +97,7 @@ html {
 }
 
 .slider {
-  background-color: #c8c8c8;
+  background-color: var(--text-running);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -104,7 +119,7 @@ html {
 }
 
 input:checked+.slider {
-  background-color: #62b283;
+  background-color: #ca2779;
 }
 
 input:checked+.slider:before {
@@ -139,7 +154,7 @@ input:checked+.slider:before {
   font-size: 17vh;
   white-space: nowrap;
   position: relative;
-  color: #a5a5a5;
+  color: var(--text-running);
   font-weight: bold;
 }
 
@@ -203,7 +218,7 @@ input:checked+.slider:before {
   }
 }
 
-/* MAIN PIC */
+/* MAIN PICS */
 
 .intro-img,
 .intro-img-top {
