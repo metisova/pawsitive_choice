@@ -9,9 +9,9 @@
 }
 
 :root[data-theme='dark'] {
---background-main: #2a2a2a;
---text: #a6a6a6;
---text-running: #a5a5a5;
+  --background-main: #2a2a2a;
+  --text: #a6a6a6;
+  --text-running: #a5a5a5;
 }
 
 /* BASIC STYLES */
@@ -248,15 +248,29 @@ input:checked+.slider:before {
   height: 100%;
   object-fit: cover;
   object-position: center center;
-  animation: slideFromTop 2s ease-in-out forwards;
+  animation: cageFall 1s ease-in-out forwards;
 }
 
-@keyframes slideFromTop {
+.cage-rise {
+  animation: cageRise 1s ease-in-out forwards;
+}
+
+@keyframes cageFall {
   0% {
     transform: translateY(-100%);
   }
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes cageRise {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
   }
 }

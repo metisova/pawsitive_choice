@@ -55,7 +55,9 @@ const App = () => {
 
   const handleRabbitClick = () => {
     setCage(true);
-    setDarkMode(true);
+    setTimeout(() => {
+      setDarkMode(true);
+    }, 1000);
   };
 
   const handleCageClick = () => {
