@@ -1,53 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
+import { ThemeSwitch } from './components/ThemeSwitch';
+import { RunningLine } from './components/RunningLine';
+import { NavLink } from './components/NavLink';
 
 import logo from './img/logo.png';
 import logoWhite from './img/logo-white.png';
 import rabbitImage from './img/rabbit_new.png';
 import cageImage from './img/cage.png';
-
-const NavLink = ({ href, text }) => {
-  return (
-    <a className="navlink" href={href}>
-      {text}
-    </a>
-  );
-};
-
-const ThemeSwitch = ({ darkMode, handleThemeChange }) => {
-  return (
-    <div className="theme-switch-wrapper">
-      <span className="theme-switch-text">
-        {darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
-      </span>
-      <label className="theme-switch" htmlFor="checkbox">
-        <input
-          type="checkbox"
-          id="checkbox"
-          onChange={handleThemeChange}
-          checked={darkMode}
-        />
-        <div className="slider round"></div>
-      </label>
-    </div>
-  );
-};
-
-const RunningLine = ({ speed }) => {
-  return (
-    <p className="running-line">
-      <span className={`running-line-text speed${speed}`}>
-        this project aims to increase awareness about animal testing 3 this
-        project aims to increase awareness about animal testing&nbsp;
-      </span>
-      <span className={`running-line-text speed${speed + 1}`}>
-        this project aims to increase awareness about animal testing 3 this
-        project aims to increase awareness about animal testing&nbsp;
-      </span>
-    </p>
-  );
-};
 
 const App = () => {
   const [cage, setCage] = useState(false);

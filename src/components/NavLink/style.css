@@ -1,0 +1,12 @@
+.navlink {
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--text);
+  padding: 1rem;
+  margin-right: 1rem;
+}
+
+.navlink:hover {
+  border-bottom: 2px solid var(--text);
+}
