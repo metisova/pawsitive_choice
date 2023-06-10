@@ -23,8 +23,10 @@
     "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
+    "@zxing/browser": "^0.1.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.12.1"
+    "react-router-dom": "^6.12.1",
+    "react-zxing": "^1.1.4"
   }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import DB from '../../db.json';
+import { BarcodeScanner } from '../BarcodeScanner';
 
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
@@ -20,15 +21,20 @@ export const Scanner = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        if (data.products && data.products.length > 0 && data.products.length < 14) {
+        if (
+          data.products &&
+          data.products.length > 0 &&
+          data.products.length < 14
+        ) {
           const product = data.products[0];
           setBrandTitle(product.brand);
           setError(null);
         } else if (data.products && data.products.length >= 14) {
           setBrandTitle('');
-          setError('Wrong barcode format. Please check the lenght of your barcode.');
-        }
-        else {
+          setError(
+            'Wrong barcode format. Please check the lenght of your barcode.',
+          );
+        } else {
           setBrandTitle('');
           setError('Product is not found.');
         }
@@ -56,7 +62,16 @@ export const Scanner = () => {
       <button onClick={handleButtonClick}>Submit</button>
 
       {error && <p>{error}</p>}
-      {brand && (<p>Brand: {brandTitle} <br /> Country: {brand.country}<br /> Cruelty Free: {brand.crueltyFree ? 'Yes': 'No'} <br /> <a href={brand.url}>Find out more</a></p>)}
+      {brand && (
+        <p>
+          Brand: {brandTitle} <br /> Country: {brand.country}
+          <br /> Cruelty Free: {brand.crueltyFree ? 'Yes' : 'No'} <br />{' '}
+          <a href={brand.url}>Find out more</a>
+        </p>
+      )}
+      <div className="video">
+        <BarcodeScanner />
+      </div>
     </div>
   );
 };
