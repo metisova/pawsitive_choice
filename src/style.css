@@ -34,8 +34,8 @@ html {
   scroll-behavior: smooth;
 }
 
-/* HEADER AND NAVIGATION */
-
+ /* HEADER AND NAVIGATION */
+/*
 .page-header {
   display: flex;
   justify-content: space-between;
@@ -57,7 +57,8 @@ html {
   justify-content: center;
   height: 50px;
 }
-
+ */
+ 
 /* MAIN PICS */
 
 .intro-img,

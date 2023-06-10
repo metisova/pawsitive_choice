@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { createRoot } from 'react-dom/client';
 import './style.css';
-import { ThemeSwitch } from './components/ThemeSwitch';
 import { RunningLine } from './components/RunningLine';
-import { NavLink } from './components/NavLink';
-
-import logo from './img/logo.png';
-import logoWhite from './img/logo-white.png';
+import { Header } from './components/Header';
 import rabbitImage from './img/rabbit_new.png';
 import cageImage from './img/cage.png';
 
@@ -26,11 +22,6 @@ const App = () => {
     setDarkMode(false);
   };
 
-  const handleThemeChange = (e) => {
-    setDarkMode(e.target.checked);
-    setCage(!cage);
-  };
-
   const switchTheme = () => {
     if (darkMode) {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -45,21 +36,8 @@ const App = () => {
 
   return (
     <>
-      <header className="page-header">
-        <nav className="navlink-wrapper">
-          <NavLink href="#Home" text="Home" />
-          <NavLink href="#about" text="About" />
-        </nav>
-        <div className="logo">
-          <img src={darkMode ? logoWhite : logo} alt="positive choice logo" />
-        </div>
-        <ThemeSwitch
-          darkMode={darkMode}
-          handleThemeChange={handleThemeChange}
-        />
-      </header>
+      <Header darkMode={darkMode} setDarkMode={setDarkMode}/>
       <main>
-        {/* RUNNING LINE */}
         <div className="running-line-container">
           <RunningLine speed={1} />
           <RunningLine speed={3} />

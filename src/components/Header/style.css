@@ -1,0 +1,23 @@
+/* HEADER AND NAVIGATION */
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 0;
+}
+
+.navlink-wrapper {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.logo {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
