@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import DB from '../../db.json';
 import { BarcodeScanner } from '../BarcodeScanner';
+import './style.css';
 
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
   const [brandTitle, setBrandTitle] = useState('');
   const [error, setError] = useState(null);
+  const [scanner, setScanner] = useState(false);
 
   const handleBarcodeChange = (event) => {
     setBarcode(event.target.value);
@@ -50,6 +52,10 @@ export const Scanner = () => {
 
   const brand = DB[brandTitle];
 
+  const openScanner = () => {
+    setScanner(true);
+  };
+
   return (
     <div>
       <label htmlFor="barcodeInput">Enter Barcode number: </label>
@@ -69,9 +75,11 @@ export const Scanner = () => {
           <a href={brand.url}>Find out more</a>
         </p>
       )}
-      <div className="video">
+      <button onClick={openScanner}>Open Scanner</button>
+      {scanner ? (<div className="video-container">
         <BarcodeScanner />
-      </div>
+      </div>): ''}
+      
     </div>
   );
 };

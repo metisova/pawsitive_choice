@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useZxing } from 'react-zxing';
+import './style.css';
 
 export const BarcodeScanner = () => {
   const [result, setResult] = useState('');
@@ -19,7 +20,7 @@ export const BarcodeScanner = () => {
 
   return (
     <>
-      <video ref={ref} width={600} height={600} />
+      <video ref={ref} className='video'/>
       <p>
         <span>Last result:</span>
         <span>{result}</span>
