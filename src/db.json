@@ -1,0 +1,64 @@
+{
+  "Chanel": {
+    "name": "Chanel",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.chanel.com/cz/"
+  },
+
+  "Lush": {
+    "name": "Lush",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://www.lush.com/cz/cs"
+  },
+
+  "The Ordinary": {
+    "name": "The Ordinary",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://theordinary.com/en-cz"
+  },
+
+  "Garnier": {
+    "name": "Garnier",
+    "country": "France",
+    "crueltyFree": true,
+    "url": "https://www.garnier.cz/"
+  },
+
+  "Neutrogena": {
+    "name": "Neutrogena",
+    "country": "USA",
+    "crueltyFree": false,
+    "url": "https://www.neutrogena.com/"
+  },
+
+  "Elizabeth Arden": {
+    "name": "Elizabeth Arden",
+    "country": "USA",
+    "crueltyFree": false,
+    "url": "https://www.elizabetharden.com/"
+  },
+
+  "Purity Vision": {
+    "name": "Purity Vision",
+    "country": "Czech Republic",
+    "crueltyFree": true,
+    "url": "https://www.purityvision.cz/"
+  },
+
+  "Inecto": {
+    "name": "Inecto",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://www.inecto.com/en_gb/"
+  },
+
+  "Rimmel London": {
+    "name": "Rimmel London",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://www.rimmellondon.com/cs-cz"
+  }
+}
