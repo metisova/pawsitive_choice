@@ -27,21 +27,20 @@
 
 @media (max-width: 840px) {
   .page-header {
-    flex-direction: column;
     padding: 10px 15px 0;
   }
 
   .navlink-wrapper {
     width: 100%;
     justify-content: center;
+    align-items: center;
   }
 
   .logo {
     padding: 7px;
-    order: -1;
   }
 
   .logo img {
-    width: 50%;
+    width: 90%;
   }
 }
