@@ -29,6 +29,7 @@
 @media (max-width: 840px) {
   .page-header {
     flex-direction: column;
+    padding: 10px 15px 0;
   }
 
   .navlink-wrapper {
@@ -37,7 +38,10 @@
   }
 
   .logo {
-    padding: 10px;
-    width: 100%;
+    padding: 7px;
+  }
+
+  .logo img {
+    width: 50%;
   }
 }
