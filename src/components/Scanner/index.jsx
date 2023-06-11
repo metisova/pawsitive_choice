@@ -61,7 +61,7 @@ export const Scanner = () => {
 
   const closeScanner = () => {
     setScanner(false);
-  }
+  };
 
   const darkMode = useContext(ThemeContext);
 
@@ -74,9 +74,11 @@ export const Scanner = () => {
           </button>
           {scanner ? (
             <div className="video-container">
-              <button onClick={closeScanner}className='close-video-button'>X</button>
+              <button onClick={closeScanner} className="close-video-button">
+                X
+              </button>
               <div className="video-mid-container">
-                <BarcodeScanner paused={!scanner}/>
+                <BarcodeScanner paused={!scanner} />
               </div>
             </div>
           ) : (
@@ -88,7 +90,7 @@ export const Scanner = () => {
             alt="Scanner icon"
           />
           <hr />
-          <label className="input-lable" htmlFor="barcodeInput">
+          <label className="input-label" htmlFor="barcodeInput">
             Enter Barcode number:{' '}
           </label>
           <input
@@ -101,22 +103,21 @@ export const Scanner = () => {
           <button className="submit-button" onClick={handleButtonClick}>
             Submit
           </button>
-
+        </div>
+        <div className="scanner-container-text">  
           {error && <p>{error}</p>}
-          {brand && (
-            <p>
+          {brand ? (
+            <p className='brand-info'>
               Brand: {brandTitle} <br /> Country: {brand.country}
               <br /> Cruelty Free: {brand.crueltyFree
                 ? 'Yes'
-                : 'No'} <br /> <a href={brand.url}>Find out more</a>
+                : 'No'} <br /> <a className='brand-url' href={brand.url} target='blank'>Find out more</a>
             </p>
-          )}
-        </div>
-        <div className="scanner-container-text">
-          <p>
+          ): (<p>
             Use scanner to determine if the brand still carries out animal
             testing for its products
-          </p>
+          </p>)}
+          
         </div>
       </div>
     </div>

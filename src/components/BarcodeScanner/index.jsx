@@ -25,10 +25,9 @@ export const BarcodeScanner = ({ paused }) => {
   return (
     <>
       <video ref={ref} className="video" />
-      <p>
-        <span>Last result:</span>
-        <span>{result}</span>
-      </p>
+      <div className="barcode-result-wrapper">
+        <p className="barcode-result">Last result: 123456789{result}</p>
+      </div>
     </>
   );
 };

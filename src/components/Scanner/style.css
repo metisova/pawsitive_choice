@@ -88,14 +88,15 @@ hr:after {
   top: -18px;
 }
 
-.input-lable {
+.input-label {
   line-height: 2rem;
 }
 
 .input {
   width: 50%;
-  line-height: 2rem;
+  line-height: 2.5rem;
   border-radius: 20px;
+  padding: 0 15px;
 }
 
 .video-container {
@@ -123,6 +124,12 @@ hr:after {
   position: relative;
   width: 100%;
   height: 100%;
+}
+
+.brand-info {
+  font-size: 2.5vw;
+  text-align: center;
+  line-height: 4vw;
 }
 
 @media (max-width: 840px) {
