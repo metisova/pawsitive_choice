@@ -17,7 +17,7 @@ export const Scanner = () => {
     setBarcode(event.target.value);
   };
 
-  const proxyurl = process.env.NODE_ENV === 'development' ? 'https://cors-anywhere.herokuapp.com/' : '';
+  const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 
   const productFetch = (barcode) => {
     fetch(
