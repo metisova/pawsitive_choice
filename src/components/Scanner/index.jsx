@@ -63,6 +63,11 @@ export const Scanner = () => {
     setScanner(false);
   };
 
+  const handleResult = (result) => {
+    setBarcode(result)
+    closeScanner();
+  } 
+
   const darkMode = useContext(ThemeContext);
 
   return (
@@ -78,7 +83,7 @@ export const Scanner = () => {
                 X
               </button>
               <div className="video-mid-container">
-                <BarcodeScanner paused={!scanner} />
+                <BarcodeScanner paused={!scanner} handleResult={handleResult}/>
               </div>
             </div>
           ) : (

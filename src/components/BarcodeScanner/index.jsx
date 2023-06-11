@@ -3,8 +3,7 @@ import { useState } from 'react';
 import { useZxing } from 'react-zxing';
 import './style.css';
 
-export const BarcodeScanner = ({ paused }) => {
-  const [result, setResult] = useState('');
+export const BarcodeScanner = ({ paused, handleResult }) => {
   const { ref } = useZxing({
     paused,
     constraints: {
@@ -16,18 +15,11 @@ export const BarcodeScanner = ({ paused }) => {
       },
     },
     onResult(result) {
-      setResult(result.getText());
+      handleResult(result.getText());
     },
   });
 
-  console.log(result);
-
   return (
-    <>
       <video ref={ref} className="video" />
-      <div className="barcode-result-wrapper">
-        <p className="barcode-result">Last result: 123456789{result}</p>
-      </div>
-    </>
   );
 };
