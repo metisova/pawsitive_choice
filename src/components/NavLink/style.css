@@ -5,6 +5,7 @@
   color: var(--text);
   padding: 1rem;
   margin-right: 1rem;
+  border-bottom: 2px solid transparent;
 }
 
 .navlink:hover {

@@ -4,6 +4,7 @@
   display: flex;
   justify-content: end;
   align-items: center;
+  width: calc(50% - 55px);
 }
 
 .theme-switch-text {
@@ -60,4 +61,12 @@ input:checked+.slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+@media (max-width: 840px) {
+  .theme-switch-wrapper {
+    width: 100%;
+    justify-content: center;
+    padding-top: 5px;
+  }
 }
