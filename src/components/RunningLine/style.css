@@ -81,3 +81,14 @@
     transform: translateX(-200%);
   }
 }
+
+
+@media (max-width: 840px) {
+  .running-line-container {
+
+    margin-top: 1rem;
+}
+  .running-line {
+    font-size: 15vh;
+  }
+}

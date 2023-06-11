@@ -3,7 +3,7 @@ import './style.css';
 
 export const RunningLine = ({ speed }) => {
   const runningText =
-    'this project aims to increase awareness about animal testing this project aims to increase awareness about animal testing&nbsp;';
+    'this project aims to increase awareness about animal testing this project aims to increase awareness about animal testing\u00A0';
 
   return (
     <p className="running-line">
