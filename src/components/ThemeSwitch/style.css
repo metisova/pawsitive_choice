@@ -69,4 +69,20 @@ input:checked+.slider:before {
     justify-content: center;
     padding-top: 5px;
   }
+
+  .theme-switch-text {
+    font-size: 0.8rem;
+  }
+
+  .theme-switch {
+    height: 20px;
+    width: 40px;
+  }
+
+  .slider:before {
+    bottom: 3px;
+    left: 3px;
+    height: 15px;
+    width: 15px;
+  }
 }

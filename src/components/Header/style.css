@@ -15,7 +15,6 @@
   width: calc(50% - 55px);
 }
 
-
 .logo {
   flex-grow: 1;
   display: flex;
@@ -23,7 +22,7 @@
 }
 
 .logo img {
-  width: 110px;
+  width: 130px;
 }
 
 @media (max-width: 840px) {
@@ -39,6 +38,7 @@
 
   .logo {
     padding: 7px;
+    order: -1;
   }
 
   .logo img {

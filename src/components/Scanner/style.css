@@ -14,7 +14,7 @@
   padding: 30px 0;
   flex-grow: 1;
   font-size: 1.5rem;
-  border-radius: 20px;
+  border-radius: 30px;
   background-color: var(--background-small);
   color: var(--text-second);
   max-width: 550px;
@@ -80,7 +80,7 @@ hr:after {
 }
 
 .input-label {
-  line-height: 2rem;
+  font-size: 1.5rem;
 }
 
 .input {
@@ -137,6 +137,12 @@ hr:after {
   .scanner-container {
     flex-direction: column;
     margin: 2rem auto 0;
+    gap: 1.5rem;
+  }
+
+  .scanner-container-inputs {
+    margin: 0 5% 0 5%;
+    gap: 20px;
   }
 
   .scanner-container-text {
@@ -144,12 +150,28 @@ hr:after {
     width: 80%;
     font-weight: bold;
     color: var(--text);
-    margin: 0 5% 0 2.5%;
-    padding: 30px 0;
+    margin: 0 5% 0 5%;
+    padding: 10px 0;
   }
 
   .video-container {
     top: 0;
+  }
+
+  .input-label {
+    font-size: 1rem;
+  }
+
+  .input {
+    width: 70%;
+    line-height: 2rem;
+    padding: 0 15px;
+  }
+
+  .submit-button {
+    height: 35px;
+    min-width: 130px;
+    padding: 10px 7px;
   }
 
   .brand-info {

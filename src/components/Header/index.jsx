@@ -14,7 +14,7 @@ export const Header = ({ darkMode, setDarkMode }) => {
     <header className="page-header">
       <nav className="navlink-wrapper">
         <NavLink href="/" text="Home" />
-        <NavLink href="/scanning" text="Scanner" />
+        <NavLink href="/scanning" text="Scan" />
       </nav>
       <div className="logo">
         <img src={darkMode ? logoWhite : logo} alt="positive choice logo" />

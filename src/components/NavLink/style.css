@@ -4,7 +4,7 @@
   text-transform: uppercase;
   color: var(--text);
   padding: 1rem;
-  margin-right: 1rem;
+  margin: 0 0.5rem;
   border-bottom: 2px solid transparent;
 }
 
@@ -17,6 +17,5 @@
   .navlink {
     font-size: 0.9rem;
     padding: 0.5rem;
-    margin-right: 0.5rem;
 }
 }
