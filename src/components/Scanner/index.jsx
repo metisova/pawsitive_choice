@@ -59,6 +59,10 @@ export const Scanner = () => {
     setScanner(true);
   };
 
+  const closeScanner = () => {
+    setScanner(false);
+  }
+
   const darkMode = useContext(ThemeContext);
 
   return (
@@ -70,7 +74,10 @@ export const Scanner = () => {
           </button>
           {scanner ? (
             <div className="video-container">
-              <BarcodeScanner />
+              <button onClick={closeScanner}className='close-video-button'>X</button>
+              <div className="video-mid-container">
+                <BarcodeScanner paused={!scanner}/>
+              </div>
             </div>
           ) : (
             ''
