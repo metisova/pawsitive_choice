@@ -1,7 +1,9 @@
 import React from 'react';
-import { useState } from 'react';
-import { useZxing } from 'react-zxing';
+import { useZxing, DecodeHintType } from 'react-zxing';
 import './style.css';
+
+const hints = new Map();
+hints.set(DecodeHintType.TRY_HARDER, true);
 
 export const BarcodeScanner = ({ paused, handleResult }) => {
   const { ref } = useZxing({
@@ -14,12 +16,11 @@ export const BarcodeScanner = ({ paused, handleResult }) => {
         aspectRatio: { ideal: 1.7777777778 },
       },
     },
+    hints,
     onResult(result) {
       handleResult(result.getText());
     },
   });
 
-  return (
-      <video ref={ref} className="video" />
-  );
+  return <video ref={ref} className="video" />;
 };
