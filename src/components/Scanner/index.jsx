@@ -20,11 +20,25 @@ export const Scanner = () => {
   const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 
   const productFetch = (barcode) => {
+    console.log(barcode);
+    if (barcode.length <= 0 || barcode.lenght >= 14) {
+      setBrandTitle('');
+      setError(
+        'Wrong barcode format. Please check the lenght of your barcode.',
+      );
+      return;
+    }
+
     fetch(
       proxyurl +
         `https://api.barcodelookup.com/v3/products?barcode=${barcode}&formatted=y&key=9jdx75km4av4da5tusc467p5wwzptw`,
     )
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Not 2xx response", {cause: response});
+      }
+        response.json();
+      })
       .then((data) => {
         if (
           data.products &&
@@ -44,11 +58,11 @@ export const Scanner = () => {
           setError('Product is not found.');
         }
       })
-      .catch((error) => {
+     .catch((error) => {
         console.log(error);
         setBrandTitle('');
         setError('Product is not found');
-      });
+      }); 
 
     setBarcode('');
   };
@@ -79,6 +93,27 @@ export const Scanner = () => {
   };
 
   const darkMode = useContext(ThemeContext);
+
+  let text = (
+    <p>
+      Use scanner to determine if the brand still carries out animal testing for
+      its products
+    </p>
+  );
+
+  if (brand) {
+    text = (
+      <p className="brand-info">
+        Brand: {brandTitle} <br /> Country: {brand.country}
+        <br /> Cruelty Free: {brand.crueltyFree ? 'Yes' : 'No'} <br />{' '}
+        <a className="brand-url" href={brand.url} target="blank">
+          Find out more
+        </a>
+      </p>
+    );
+  } else if (error) {
+    text = <p>{error}</p>;
+  }
 
   return (
     <div>
@@ -119,25 +154,7 @@ export const Scanner = () => {
             Submit
           </button>
         </div>
-        <div className="scanner-container-text">
-          {error && <p>{error}</p>}
-          {brand ? (
-            <p className="brand-info">
-              Brand: {brandTitle} <br /> Country: {brand.country}
-              <br /> Cruelty Free: {brand.crueltyFree
-                ? 'Yes'
-                : 'No'} <br />{' '}
-              <a className="brand-url" href={brand.url} target="blank">
-                Find out more
-              </a>
-            </p>
-          ) : (
-            <p>
-              Use scanner to determine if the brand still carries out animal
-              testing for its products
-            </p>
-          )}
-        </div>
+        <div className="scanner-container-text">{text}</div>
       </div>
     </div>
   );
