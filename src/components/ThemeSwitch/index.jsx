@@ -5,7 +5,7 @@ export const ThemeSwitch = ({ darkMode, handleThemeChange }) => {
   return (
     <div className="theme-switch-wrapper">
       <span className="theme-switch-text">
-        {darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+        {darkMode ? 'Light mode' : 'Dark mode'}
       </span>
       <label className="theme-switch" htmlFor="checkbox">
         <input

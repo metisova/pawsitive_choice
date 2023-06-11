@@ -1,8 +1,45 @@
+.scanner-container {
+  height: calc(90% - 2rem);
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  margin: 4rem auto 0;
+  gap: 3rem;
+}
+
+.scanner-container-text {
+  font-size: 6rem;
+  width: 50%;
+  font-weight: bold;
+  color: var(--text);
+  margin-left: 3rem;
+}
+
+.scanner-container-inputs {
+  padding-top: 2rem;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  background-color: var(--background-small);
+  color: var(--text-second);
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.scannerIcon {
+  max-width: 65%;
+
+}
+
 @media (max-width: 840px) {
   .video-container {
     position: fixed;
     left: 0;
     top: 0;
-    height: 100vh;
+    height: 100%;
   }
 }

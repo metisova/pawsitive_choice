@@ -6,12 +6,16 @@
   --background-main: #ebebeb;
   --text: #242223;
   --text-running: #a5a5a5;
+  --background-small: #2a2a2a;
+  --text-second: #ebebeb;
 }
 
 :root[data-theme='dark'] {
   --background-main: #2a2a2a;
   --text: #a6a6a6;
   --text-running: #a5a5a5;
+  --background-small: #ebebeb;
+  --text-second: #242223;
 }
 
 /* BASIC STYLES */
@@ -34,4 +38,3 @@ body {
 html {
   scroll-behavior: smooth;
 }
-

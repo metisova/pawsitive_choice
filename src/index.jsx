@@ -5,10 +5,11 @@ import { Header } from './components/Header';
 import { HomePage } from './components/HomePage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Scanner } from './components/Scanner';
+import { ThemeContext } from './components/context';
 
 const router = createBrowserRouter([
   { path: '/', element: <HomePage /> },
-  { path: '/scanning', element: <Scanner /> }
+  { path: '/scanning', element: <Scanner /> },
 ]);
 
 const App = () => {
@@ -27,10 +28,10 @@ const App = () => {
   }, [darkMode]);
 
   return (
-    <>
+    <ThemeContext.Provider value={darkMode}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <RouterProvider router={router} />
-    </>
+    </ThemeContext.Provider>
   );
 };
 

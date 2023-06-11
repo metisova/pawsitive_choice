@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { createRoot } from 'react-dom/client';
 import DB from '../../db.json';
 import { BarcodeScanner } from '../BarcodeScanner';
 import './style.css';
+import scannerIconWhite from '../../img/qr-code-scan-light.png';
+import scannerIconDark from '../../img/qr-code-scan.png';
+import { ThemeContext } from '../context';
 
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
@@ -56,30 +59,53 @@ export const Scanner = () => {
     setScanner(true);
   };
 
+  const darkMode = useContext(ThemeContext);
+
   return (
     <div>
-      <label htmlFor="barcodeInput">Enter Barcode number: </label>
-      <input
-        type="text"
-        id="barcodeInput"
-        value={barcode}
-        onChange={handleBarcodeChange}
-      />
-      <button onClick={handleButtonClick}>Submit</button>
+      <div className="scanner-container">
+        <div className="scanner-container-text">
+          <p>
+            Use scanner to determine if the brand still carries out animal
+            testing for its products
+          </p>
+        </div>
+        <div className="scanner-container-inputs">
+        <img
+              className="scannerIcon"
+              src={darkMode ? scannerIconDark : scannerIconWhite}
+              alt="Scanner icon"
+            />
+            <br />
+          <button className="open-scanner" onClick={openScanner}>Open Scanner</button>
+          {scanner ? (
+            <div className="video-container">
+              <BarcodeScanner />
+            </div>
+          ) : (
+            ''
+          )}
+          <br />
+          <label htmlFor="barcodeInput">Enter Barcode number: </label>
+          <input
+            type="text"
+            id="barcodeInput"
+            value={barcode}
+            onChange={handleBarcodeChange}
+          />
+          <button onClick={handleButtonClick}>Submit</button>
 
-      {error && <p>{error}</p>}
-      {brand && (
-        <p>
-          Brand: {brandTitle} <br /> Country: {brand.country}
-          <br /> Cruelty Free: {brand.crueltyFree ? 'Yes' : 'No'} <br />{' '}
-          <a href={brand.url}>Find out more</a>
-        </p>
-      )}
-      <button onClick={openScanner}>Open Scanner</button>
-      {scanner ? (<div className="video-container">
-        <BarcodeScanner />
-      </div>): ''}
-      
+          {error && <p>{error}</p>}
+          {brand && (
+            <p>
+              Brand: {brandTitle} <br /> Country: {brand.country}
+              <br /> Cruelty Free: {brand.crueltyFree
+                ? 'Yes'
+                : 'No'} <br /> <a href={brand.url}>Find out more</a>
+            </p>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
