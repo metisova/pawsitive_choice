@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.css';
-import logo from '../../img/logo.png';
-import logoWhite from '../../img/logo-white.png';
+import logo from '../../img/logo.webp';
+import logoWhite from '../../img/logo-white.webp';
 import { ThemeSwitch } from '../ThemeSwitch';
 import { NavLink } from '../NavLink';
 

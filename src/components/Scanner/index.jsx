@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { createRoot } from 'react-dom/client';
 import DB from '../../db.json';
 import { BarcodeScanner } from '../BarcodeScanner';
 import './style.css';
