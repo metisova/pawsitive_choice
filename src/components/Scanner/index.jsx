@@ -64,20 +64,10 @@ export const Scanner = () => {
   return (
     <div>
       <div className="scanner-container">
-        <div className="scanner-container-text">
-          <p>
-            Use scanner to determine if the brand still carries out animal
-            testing for its products
-          </p>
-        </div>
         <div className="scanner-container-inputs">
-        <img
-              className="scannerIcon"
-              src={darkMode ? scannerIconDark : scannerIconWhite}
-              alt="Scanner icon"
-            />
-            <br />
-          <button className="open-scanner" onClick={openScanner}>Open Scanner</button>
+          <button className="open-scanner" onClick={openScanner}>
+            Open Scanner
+          </button>
           {scanner ? (
             <div className="video-container">
               <BarcodeScanner />
@@ -86,14 +76,26 @@ export const Scanner = () => {
             ''
           )}
           <br />
-          <label htmlFor="barcodeInput">Enter Barcode number: </label>
+          <img
+            className="scannerIcon"
+            src={darkMode ? scannerIconDark : scannerIconWhite}
+            alt="Scanner icon"
+          />
+          <br />
+          <hr />
+          <label className="input-lable" htmlFor="barcodeInput">
+            Enter Barcode number:{' '}
+          </label>
           <input
+            className="input"
             type="text"
             id="barcodeInput"
             value={barcode}
             onChange={handleBarcodeChange}
           />
-          <button onClick={handleButtonClick}>Submit</button>
+          <button className="submit-button" onClick={handleButtonClick}>
+            Submit
+          </button>
 
           {error && <p>{error}</p>}
           {brand && (
@@ -104,6 +106,12 @@ export const Scanner = () => {
                 : 'No'} <br /> <a href={brand.url}>Find out more</a>
             </p>
           )}
+        </div>
+        <div className="scanner-container-text">
+          <p>
+            Use scanner to determine if the brand still carries out animal
+            testing for its products
+          </p>
         </div>
       </div>
     </div>

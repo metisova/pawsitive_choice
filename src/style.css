@@ -32,7 +32,6 @@ body,
 body {
   background-color: var(--background-main);
   font-family: 'Montserrat', sans-serif;
-  overflow: hidden;
 }
 
 html {

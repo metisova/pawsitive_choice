@@ -23,34 +23,3 @@
   max-width: 100%;
   max-height: 100%;
 }
-
-.cage-img {
-  height: 100%;
-  object-fit: cover;
-  object-position: center center;
-  animation: cageFall 1s ease-in-out forwards;
-}
-
-.cage-rise {
-  animation: cageRise 1s ease-in-out forwards;
-}
-
-@keyframes cageFall {
-  0% {
-    transform: translateY(-100%);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes cageRise {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(-100%);
-  }
-}

@@ -6,36 +6,101 @@
   flex-direction: row;
   margin: 4rem auto 0;
   gap: 3rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .scanner-container-text {
-  font-size: 6rem;
-  width: 50%;
+  font-size: 5vw;
+  width: 40%;
   font-weight: bold;
   color: var(--text);
-  margin-left: 3rem;
+  margin: 0 5% 0 2.5%;
+  padding: 2% 0;
 }
 
 .scanner-container-inputs {
-  padding-top: 2rem;
+  padding: 2% 0;
   flex-grow: 1;
   font-size: 1.5rem;
   border-radius: 20px;
   background-color: var(--background-small);
   color: var(--text-second);
-  max-width: 40%;
+  max-width: 550px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin: 0 2.5% 0 5%;
+  gap: 20px;
+}
+
+.open-scanner,
+.submit-button {
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: .3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
+  text-align: center;
+  padding: 16px 14px;
+  background-color: var(--text-second);
+  color: var(--text);
+}
+
+.open-scanner {
+  height: 60px;
+}
+
+.submit-button {
+  height: 45px;
 }
 
 .scannerIcon {
-  max-width: 65%;
+  max-width: 35%;
+}
 
+hr {
+  border: none;
+  border-top: 3px double var(--text-second);
+  color: var(--text-second);
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+  width: 60%;
+}
+
+hr:after {
+  background: var(--background-small);
+  content: 'or';
+  padding: 0 6px;
+  position: relative;
+  top: -18px;
+}
+
+.input-lable {
+  line-height: 2rem;
+}
+
+.input {
+  width: 50%;
+  line-height: 2rem;
+  border-radius: 20px;
 }
 
 @media (max-width: 840px) {
+  .scanner-container{
+    flex-direction: column;
+  }
   .video-container {
     position: fixed;
     left: 0;
