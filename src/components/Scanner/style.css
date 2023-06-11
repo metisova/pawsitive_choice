@@ -48,6 +48,12 @@
   color: var(--text);
 }
 
+.open-scanner:hover,
+.submit-button:hover {
+  background-color: #a5a5a5;
+  color: #ebebeb;
+}
+
 .open-scanner {
   height: 60px;
 }
@@ -156,6 +162,10 @@ hr:after {
 
   .video-container {
     top: 0;
+  }
+
+  .open-scanner {
+    height: 50px;
   }
 
   .input-label {
