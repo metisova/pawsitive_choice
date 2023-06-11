@@ -16,11 +16,11 @@
   font-weight: bold;
   color: var(--text);
   margin: 0 5% 0 2.5%;
-  padding: 2% 0;
+  padding: 30px 0;
 }
 
 .scanner-container-inputs {
-  padding: 2% 0;
+  padding: 30px 0;
   flex-grow: 1;
   font-size: 1.5rem;
   border-radius: 20px;
@@ -32,7 +32,7 @@
   justify-content: space-around;
   align-items: center;
   margin: 0 2.5% 0 5%;
-  gap: 20px;
+  gap: 30px;
 }
 
 .open-scanner,
@@ -67,6 +67,7 @@
 
 .scannerIcon {
   max-width: 35%;
+  margin: 35px 0;
 }
 
 hr {

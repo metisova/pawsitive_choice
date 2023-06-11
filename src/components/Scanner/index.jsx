@@ -75,13 +75,11 @@ export const Scanner = () => {
           ) : (
             ''
           )}
-          <br />
           <img
             className="scannerIcon"
             src={darkMode ? scannerIconDark : scannerIconWhite}
             alt="Scanner icon"
           />
-          <br />
           <hr />
           <label className="input-lable" htmlFor="barcodeInput">
             Enter Barcode number:{' '}
