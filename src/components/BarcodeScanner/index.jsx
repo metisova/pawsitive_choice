@@ -7,6 +7,7 @@ export const BarcodeScanner = ({paused}) => {
   const [result, setResult] = useState('');
   const { ref } = useZxing({
     paused,
+    onResult: (result) => console.log(result),
     constraints: {
       video: {
         facingMode: 'environment',
