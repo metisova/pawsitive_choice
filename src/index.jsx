@@ -6,6 +6,7 @@ import { HomePage } from './components/HomePage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import { Scanner } from './components/Scanner';
 import { ThemeContext } from './components/context';
+import { Footer } from './components/Footer';
 
 const router = createBrowserRouter([
   { path: '/', element: <HomePage /> },
@@ -31,6 +32,7 @@ const App = () => {
     <ThemeContext.Provider value={darkMode}>
       <Header darkMode={darkMode} setDarkMode={setDarkMode} />
       <RouterProvider router={router} />
+      <Footer />
     </ThemeContext.Provider>
   );
 };

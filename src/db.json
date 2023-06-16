@@ -1,4 +1,81 @@
 {
+  "Anastasia Beverly Hills": {
+    "name": "Anastasia Beverly Hills",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.anastasiabeverlyhills.com/"
+  },
+
+  "Artdeco": {
+    "name": "Artdeco",
+    "country": "Germany",
+    "crueltyFree": false,
+    "url": "https://www.artdeco.com/"
+  },
+
+  "Amorepacific": {
+    "name": "Amorepacific",
+    "country": "South Korea",
+    "crueltyFree": false,
+    "url": "https://www.amorepacific.com"
+  },
+
+  "Benefit Cosmetics": {
+    "name": "Benefit Cosmetics",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.benefitcosmetics.com/"
+  },
+
+  "Bioderma": {
+    "name": "Bioderma",
+    "country": "France",
+    "crueltyFree": true,
+    "url": "https://www.bioderma.com/"
+  },
+
+  "Bione Cosmetics": {
+    "name": "Bione Cosmetics",
+    "country": "Czech Republic",
+    "crueltyFree": true,
+    "url": "https://www.bionecosmetics.com/"
+  },
+
+  "Bobbi Brown": {
+    "name": "Bobbi Brown",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.bobbibrowncosmetics.com/"
+  },
+
+  "Bourjois": {
+    "name": "Bourjois",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.bourjois.co.uk/"
+  },
+
+  "Burberry Beauty": {
+    "name": "Burberry Beauty",
+    "country": "United Kingdom",
+    "crueltyFree": false,
+    "url": "https://www.burberry.com/beauty/"
+  },
+
+  "Burt's Bees": {
+    "name": "Burt's Bees",
+    "country": "USA",
+    "crueltyFree": true,
+    "url": "https://www.burtsbees.com/"
+  },
+
+  "Catrice": {
+    "name": "Catrice",
+    "country": "Germany",
+    "crueltyFree": true,
+    "url": "https://www.catrice.eu/"
+  },
+
   "Chanel": {
     "name": "Chanel",
     "country": "France",
@@ -6,32 +83,74 @@
     "url": "https://www.chanel.com/cz/"
   },
 
-  "Lush": {
-    "name": "Lush",
+  "Charlotte Tilbury": {
+    "name": "Charlotte Tilbury",
     "country": "United Kingdom",
     "crueltyFree": true,
-    "url": "https://www.lush.com/cz/cs"
+    "url": "https://www.charlottetilbury.com/"
   },
 
-  "The Ordinary": {
-    "name": "The Ordinary",
-    "country": "United Kingdom",
+  "Chantecaille": {
+    "name": "Chantecaille",
+    "country": "United States",
     "crueltyFree": true,
-    "url": "https://theordinary.com/en-cz"
+    "url": "https://www.chantecaille.com/"
   },
 
-  "Garnier": {
-    "name": "Garnier",
-    "country": "France",
-    "crueltyFree": true,
-    "url": "https://www.garnier.cz/"
-  },
-
-  "Neutrogena": {
-    "name": "Neutrogena",
-    "country": "USA",
+  "Clinique": {
+    "name": "Clinique",
+    "country": "United States",
     "crueltyFree": false,
-    "url": "https://www.neutrogena.com/"
+    "url": "https://www.clinique.com/"
+  },
+
+  "ColourPop": {
+    "name": "ColourPop",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.colourpop.com/"
+  },
+
+  "Cosrx": {
+    "name": "Cosrx",
+    "country": "South Korea",
+    "crueltyFree": true,
+    "url": "https://www.cosrx.com"
+  },
+
+  "Covergirl": {
+    "name": "Covergirl",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.covergirl.com/"
+  },
+
+  "Dior": {
+    "name": "Dior",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.dior.com/"
+  },
+
+  "Dr. Hauschka": {
+    "name": "Dr. Hauschka",
+    "country": "Germany",
+    "crueltyFree": true,
+    "url": "https://www.drhauschka.de/"
+  },
+
+  "Dr. Jart": {
+    "name": "Dr. Jart",
+    "country": "South Korea",
+    "crueltyFree": true,
+    "url": "https://www.drjart.com"
+  },
+
+  "Dove": {
+    "name": "Dove",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.dove.com"
   },
 
   "Elizabeth Arden": {
@@ -41,11 +160,88 @@
     "url": "https://www.elizabetharden.com/"
   },
 
-  "Purity Vision": {
-    "name": "Purity Vision",
-    "country": "Czech Republic",
+  "E.l.f. Cosmetics": {
+    "name": "E.l.f. Cosmetics",
+    "country": "United States",
     "crueltyFree": true,
-    "url": "https://www.purityvision.cz/"
+    "url": "https://www.elfcosmetics.com/"
+  },
+
+  "Essence": {
+    "name": "Essence",
+    "country": "Germany",
+    "crueltyFree": true,
+    "url": "https://www.essence.eu/"
+  },
+
+  "Essie": {
+    "name": "Essie",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.essie.com/"
+  },
+
+  "Estée Lauder": {
+    "name": "Estée Lauder",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.esteelauder.com/"
+  },
+
+  "Etude House": {
+    "name": "Etude House",
+    "country": "South Korea",
+    "crueltyFree": false,
+    "url": "https://www.etude.com"
+  },
+
+  "Fenty Beauty": {
+    "name": "Fenty Beauty",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.fentybeauty.com/"
+  },
+
+  "Garnier": {
+    "name": "Garnier",
+    "country": "France",
+    "crueltyFree": true,
+    "url": "https://www.garnier.cz/"
+  },
+
+  "Givenchy": {
+    "name": "Givenchy",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.givenchybeauty.com/"
+  },
+
+  "Glossier": {
+    "name": "Glossier",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.glossier.com/"
+  },
+
+  "Guerlain": {
+    "name": "Guerlain",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.guerlain.com/"
+  },
+
+  "Hourglass": {
+    "name": "Hourglass",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.hourglasscosmetics.com/"
+  },
+
+  "Huda Beauty": {
+    "name": "Huda Beauty",
+    "country": "United Arab Emirates",
+    "crueltyFree": false,
+    "url": "https://www.hudabeauty.com/"
   },
 
   "Inecto": {
@@ -55,10 +251,381 @@
     "url": "https://www.inecto.com/en_gb/"
   },
 
+  "Innisfree": {
+    "name": "Innisfree",
+    "country": "South Korea",
+    "crueltyFree": true,
+    "url": "https://www.innisfree.com"
+  },
+
+  "Isadora": {
+    "name": "Isadora",
+    "country": "Sweden",
+    "crueltyFree": true,
+    "url": "https://www.isadora.com/"
+  },
+
+  "Jeffree Star Cosmetics": {
+    "name": "Jeffree Star Cosmetics",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://jeffreestarcosmetics.com/"
+  },
+
+  "Kiehl's": {
+    "name": "Kiehl's",
+    "country": "USA",
+    "crueltyFree": false,
+    "url": "https://www.kiehls.com/"
+  },
+
+  "Kiko Milano": {
+    "name": "Kiko Milano",
+    "country": "Italy",
+    "crueltyFree": true,
+    "url": "https://www.kikocosmetics.com/"
+  },
+
+  "La Roche-Posay": {
+    "name": "La Roche-Posay",
+    "country": "France",
+    "crueltyFree": true,
+    "url": "https://www.laroche-posay.com/"
+  },
+
+  "Laneige": {
+    "name": "Laneige",
+    "country": "South Korea",
+    "crueltyFree": false,
+    "url": "https://www.laneige.com"
+  },
+
+  "Laura Mercier": {
+    "name": "Laura Mercier",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.lauramercier.com/"
+  },
+
+  "L'Oréal": {
+    "name": "L'Oréal",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.loreal.com"
+  },
+
+  "L'Oréal Paris": {
+    "name": "L'Oréal Paris",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.lorealparisusa.com/"
+  },
+
+  "Lush": {
+    "name": "Lush",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://www.lush.com/"
+  },
+
+  "MAC Cosmetics": {
+    "name": "MAC Cosmetics",
+    "country": "Canada",
+    "crueltyFree": false,
+    "url": "https://www.maccosmetics.com/"
+  },
+
+  "Make Up For Ever": {
+    "name": "Make Up For Ever",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.makeupforever.com/"
+  },
+
+  "Mamonde": {
+    "name": "Mamonde",
+    "country": "South Korea",
+    "crueltyFree": false,
+    "url": "https://www.mamonde.com"
+  },
+
+  "Manufaktura": {
+    "name": "Czeck Manufaktura",
+    "country": "Czech Republic",
+    "crueltyFree": true,
+    "url": "https://manufaktura.cz/"
+  },
+
+  "Maybelline": {
+    "name": "Maybelline",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.maybelline.com/"
+  },
+
+  "Max Factor": {
+    "name": "Max Factor",
+    "country": "United Kingdom",
+    "crueltyFree": false,
+    "url": "https://www.maxfactor.com/"
+  },
+
+  "Milani": {
+    "name": "Milani",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.milanicosmetics.com/"
+  },
+
+  "Missha": {
+    "name": "Missha",
+    "country": "South Korea",
+    "crueltyFree": true,
+    "url": "https://www.missha.com"
+  },
+
+  "Morphe": {
+    "name": "Morphe",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.morphe.com/"
+  },
+
+  "NARS": {
+    "name": "NARS",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.narscosmetics.com/"
+  },
+
+  "NARS Cosmetics": {
+    "name": "NARS Cosmetics",
+    "country": "USA",
+    "crueltyFree": false,
+    "url": "https://www.narscosmetics.com/"
+  },
+
+  "Nature Republic": {
+    "name": "Nature Republic",
+    "country": "South Korea",
+    "crueltyFree": false,
+    "url": "https://www.naturerepublic.com"
+  },
+
+  "Neutrogena": {
+    "name": "Neutrogena",
+    "country": "USA",
+    "crueltyFree": false,
+    "url": "https://www.neutrogena.com/"
+  },
+
+  "Nivea": {
+    "name": "Nivea",
+    "country": "Germany",
+    "crueltyFree": false,
+    "url": "https://www.nivea.com"
+  },
+
+  "Nuxe": {
+    "name": "Nuxe",
+    "country": "France",
+    "crueltyFree": true,
+    "url": "https://uk.nuxe.com/"
+  },
+
+  "NYX Professional Makeup": {
+    "name": "NYX Professional Makeup",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.nyxcosmetics.com/"
+  },
+
+  "Olay": {
+    "name": "Olay",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.olay.com"
+  },
+
+  "OPI": {
+    "name": "OPI",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.opi.com/"
+  },
+
+  "Pantene": {
+    "name": "Pantene",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.pantene.com"
+  },
+
+  "Pat McGrath Labs": {
+    "name": "Pat McGrath Labs",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.patmcgrath.com/"
+  },
+
+  "Physicians Formula": {
+    "name": "Physicians Formula",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.physiciansformula.com/"
+  },
+
+  "Purity Vision": {
+    "name": "Purity Vision",
+    "country": "Czech Republic",
+    "crueltyFree": true,
+    "url": "https://www.purityvision.cz/"
+  },
+
+  "Revlon": {
+    "name": "Revlon",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.revlon.com/"
+  },
+
+  "Revolution": {
+    "name": "Revolution",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://www.revolutionbeauty.com/"
+  },
+
   "Rimmel London": {
     "name": "Rimmel London",
     "country": "United Kingdom",
+    "crueltyFree": false,
+    "url": "https://www.rimmellondon.com/"
+  },
+
+  "Rituals": {
+    "name": "Rituals",
+    "country": "Netherlands",
     "crueltyFree": true,
-    "url": "https://www.rimmellondon.com/cs-cz"
+    "url": "https://www.rituals.com/"
+  },
+
+  "Rituel de Fille": {
+    "name": "Rituel de Fille",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.ritueldefille.com/"
+  },
+
+  "RYOR": {
+    "name": "RYOR",
+    "country": "Czech Republic",
+    "crueltyFree": true,
+    "url": "https://www.ryor.cz/"
+  },
+
+  "Schwarzkopf": {
+    "name": "Schwarzkopf",
+    "country": "Germany",
+    "crueltyFree": false,
+    "url": "https://www.schwarzkopf.com"
+  },
+
+  "Sephora": {
+    "name": "Sephora",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.sephora.com/"
+  },
+
+  "Sleek MakeUP": {
+    "name": "Sleek MakeUP",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://www.sleekmakeup.com/"
+  },
+
+  "Smashbox": {
+    "name": "Smashbox",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.smashbox.com/"
+  },
+
+  "Tarte Cosmetics": {
+    "name": "Tarte Cosmetics",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://tartecosmetics.com/"
+  },
+
+  "The Body Shop": {
+    "name": "The Body Shop",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://www.thebodyshop.com/"
+  },
+
+  "The Face Shop": {
+    "name": "The Face Shop",
+    "country": "South Korea",
+    "crueltyFree": false,
+    "url": "https://www.thefaceshop.com"
+  },
+
+  "The Ordinary": {
+    "name": "The Ordinary",
+    "country": "United Kingdom",
+    "crueltyFree": true,
+    "url": "https://theordinary.com/en-cz"
+  },
+
+  "Too Faced": {
+    "name": "Too Faced",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.toofaced.com/"
+  },
+
+  "Urban Decay": {
+    "name": "Urban Decay",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.urbandecay.com/"
+  },
+
+  "Weleda": {
+    "name": "Weleda",
+    "country": "Switzerland",
+    "crueltyFree": true,
+    "url": "https://www.weleda.com/"
+  },
+
+  "Wet n Wild": {
+    "name": "Wet n Wild",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.wetnwildbeauty.com/"
+  },
+
+  "Yves Saint Laurent": {
+    "name": "Yves Saint Laurent",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.yslbeautyus.com/"
+  },
+
+  "Ziaja": {
+    "name": "Ziaja",
+    "country": "Czech Republic",
+    "crueltyFree": false,
+    "url": "https://www.ziaja.com/"
+  },
+
+  "Zoeva": {
+    "name": "Zoeva",
+    "country": "Germany",
+    "crueltyFree": true,
+    "url": "https://www.zoevacosmetics.com/"
   }
 }
