@@ -33,25 +33,9 @@ export const Scanner = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        if (
-          data.products &&
-          data.products.length > 0 &&
-          data.products.length < 14
-        ) {
-          const product = data.products[0];
-          setBrandTitle(product.brand);
-          setError(null);
-        } else if (data.products && data.products.length >= 14) {
-          setBrandTitle('');
-          setError(
-            'Wrong barcode format. Please check the lenght of your barcode.',
-          );
-        } else {
-          setBrandTitle('');
-          setError(
-            `Product is not found. It is possible that we don't have it in our database... yet.`,
-          );
-        }
+        const product = data.products[0];
+        setBrandTitle(product.brand);
+        setError(null);
       })
       .catch((error) => {
         console.log(error);
@@ -115,7 +99,7 @@ export const Scanner = () => {
   return (
     <div>
       <div className="scanner-container">
-      <div className="scanner-container-text">{text}</div>
+        <div className="scanner-container-text">{text}</div>
         <div className="scanner-container-inputs">
           <button className="open-scanner" onClick={openScanner}>
             Open Scanner
