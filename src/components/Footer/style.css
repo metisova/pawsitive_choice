@@ -1,0 +1,25 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: calc((100% - 311px) / 2)
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+@media (max-width: 840px) {
+  .footer-text {
+    font-size: 0.7rem;
+}
+
+.footer-container {
+  left: calc((100% - 222px) / 2)
+}
+}
+
+
+
