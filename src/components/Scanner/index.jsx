@@ -41,7 +41,7 @@ export const Scanner = () => {
         console.log(error);
         setBrandTitle('');
         setError(
-          `Product is not found. It is possible that we don't have it in our database... yet.`,
+          `Product or brand is not found. It is possible that we don't have it in our database... yet.`,
         );
       });
 

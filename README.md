@@ -21,7 +21,7 @@ The Positive Choice app is built using the following technologies:
 
 ## Known Issues
 
-- # The app utilizes an API that is currently in a free trial period. During this trial, it allows only 50 requests, and the access will expire on July 1, 2023. To continue using the app beyond that date, either a paid subscription or a custom database will be required.
+# The app utilizes an API that is currently in a free trial period. During this trial, it allows only 50 requests, and the access will expire on July 1, 2023. To continue using the app beyond that date, either a paid subscription or a custom database will be required.
 
 ## Data Source
 

@@ -34,24 +34,25 @@
   font-size: 14px;
   line-height: 1;
   border-radius: 500px;
-  transition-property: background-color, border-color, color, box-shadow, filter;
-  transition-duration: .3s;
   border: 1px solid transparent;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   min-width: 160px;
   text-transform: uppercase;
   white-space: normal;
   font-weight: 700;
   text-align: center;
   padding: 16px 14px;
-  background-color: var(--text-second);
-  color: var(--text);
+  color: var(--text-second);
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: .3s;
+  box-shadow: inset 0 0 0 2px var(--text-second);
+  background-color: transparent;
 }
 
 .open-scanner:hover,
 .submit-button:hover {
-  background-color: #a5a5a5;
-  color: #ebebeb;
+  color: var(--text);
+  background-color: var(--text-second);
 }
 
 .open-scanner {
@@ -59,7 +60,7 @@
 }
 
 .submit-button {
-  height: 45px;
+  height: 47px;
 }
 
 .scannerIcon {
@@ -179,7 +180,7 @@ hr:after {
   }
 
   .submit-button {
-    height: 35px;
+    height: 40px;
     min-width: 130px;
     padding: 10px 7px;
   }
