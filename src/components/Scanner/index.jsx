@@ -1,14 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react';
 import DB from '../../db.json';
-import { BarcodeScanner } from '../BarcodeScanner';
-import './style.css';
-import scannerIconWhite from '../../img/qr-code-scan-light.png';
-import scannerIconDark from '../../img/qr-code-scan.png';
 import { ThemeContext } from '../context';
+import { ScannerContainer } from '../ScannerContainer';
 
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
-  const [brandTitle, setBrandTitle] = useState('');
+  const [brandTitle, setBrandTitle] = useState('Garnier');
   const [error, setError] = useState(null);
   const [scanner, setScanner] = useState(false);
 
@@ -58,8 +55,6 @@ export const Scanner = () => {
     productFetch(barcode);
   };
 
-  const brand = DB[brandTitle];
-
   const openScanner = () => {
     setScanner(true);
   };
@@ -71,7 +66,9 @@ export const Scanner = () => {
   const handleResult = (result) => {
     setBarcode(result);
     closeScanner();
-  };
+  }; 
+  
+  const brand = DB[brandTitle];
 
   const darkMode = useContext(ThemeContext);
 
@@ -97,46 +94,16 @@ export const Scanner = () => {
   }
 
   return (
-    <div>
-      <div className="scanner-container">
-        <div className="scanner-container-text">{text}</div>
-        <div className="scanner-container-inputs">
-          <button className="open-scanner" onClick={openScanner}>
-            Open Scanner
-          </button>
-          {scanner ? (
-            <div className="video-container">
-              <button onClick={closeScanner} className="close-video-button">
-                X
-              </button>
-              <div className="video-mid-container">
-                <BarcodeScanner paused={!scanner} handleResult={handleResult} />
-              </div>
-            </div>
-          ) : (
-            ''
-          )}
-          <img
-            className="scannerIcon"
-            src={darkMode ? scannerIconDark : scannerIconWhite}
-            alt="Scanner icon"
-          />
-          <hr />
-          <label className="input-label" htmlFor="barcodeInput">
-            Enter Barcode number:{' '}
-          </label>
-          <input
-            className="input"
-            type="text"
-            id="barcodeInput"
-            value={barcode}
-            onChange={handleBarcodeChange}
-          />
-          <button className="submit-button" onClick={handleButtonClick}>
-            Submit
-          </button>
-        </div>
-      </div>
-    </div>
+    <ScannerContainer
+      barcode={barcode}
+      handleBarcodeChange={handleBarcodeChange}
+      handleButtonClick={handleButtonClick}
+      openScanner={openScanner}
+      closeScanner={closeScanner}
+      scanner={scanner}
+      darkMode={darkMode}
+      text={text}
+      handleResult={handleResult}
+    />
   );
 };
