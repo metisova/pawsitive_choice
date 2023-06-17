@@ -2,10 +2,11 @@ import React, { useState, useContext, useEffect } from 'react';
 import DB from '../../db.json';
 import { ThemeContext } from '../context';
 import { ScannerContainer } from '../ScannerContainer';
+import './style.css';
 
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
-  const [brandTitle, setBrandTitle] = useState('Garnier');
+  const [brandTitle, setBrandTitle] = useState('');
   const [error, setError] = useState(null);
   const [scanner, setScanner] = useState(false);
 

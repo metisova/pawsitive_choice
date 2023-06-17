@@ -2,6 +2,8 @@ import React from 'react';
 import { BarcodeScanner } from '../BarcodeScanner';
 import scannerIconWhite from '../../img/qr-code-scan-light.png';
 import scannerIconDark from '../../img/qr-code-scan.png';
+import crossIconWhite from '../../img/cross-white.png';
+import crossIconDark from '../../img/cross.png';
 import './style.css';
 
 export const ScannerContainer = ({
@@ -26,7 +28,11 @@ export const ScannerContainer = ({
           {scanner ? (
             <div className="video-container">
               <button onClick={closeScanner} className="close-video-button">
-                x
+                <img
+                  className="closeButtonIcon"
+                  src={darkMode ? crossIconWhite : crossIconDark}
+                  alt="Cross icon"
+                />
               </button>
               <div className="video-mid-container">
                 <BarcodeScanner paused={!scanner} handleResult={handleResult} />

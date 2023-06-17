@@ -1,0 +1,16 @@
+.brand-info {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 3.2rem;
+}
+
+.brand-url {
+  color: #ca2779;
+}
+
+@media (max-width: 840px) {
+  .brand-info {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+}

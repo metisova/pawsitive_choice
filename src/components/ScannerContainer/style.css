@@ -110,12 +110,19 @@ hr:after {
   position: absolute;
   right: 10px;
   top: 10px;
-  background-color: var(--background-small);
-  color: var(--text-second);
+  background-color: var(--background-main);
   z-index: 2;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 5px;
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-video-button:hover {
+  background-color: #ca2779;
 }
 
 .video-mid-container {
@@ -188,5 +195,11 @@ hr:after {
   .brand-info {
     font-size: 1.5rem;
     line-height: 2.2rem;
+  }
+
+  .close-video-button {
+    width: 25px;
+    height: 25px;
+    border-radius: 3px;
   }
 }
