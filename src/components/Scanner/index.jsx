@@ -19,7 +19,6 @@ export const Scanner = () => {
   const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 
   const productFetch = (barcode) => {
-    console.log(barcode);
     if (barcode.length <= 0 || barcode.lenght >= 14) {
       setBrandTitle('');
       setError(
@@ -30,14 +29,9 @@ export const Scanner = () => {
 
     fetch(
       proxyurl +
-        `https://api.barcodelookup.com/v3/products?barcode=${barcode}&formatted=y&key=9jdx75km4av4da5tusc467p5wwzptw`,
+        `https://api.barcodelookup.com/v3/products?barcode=${barcode}&formatted=y&key=ivugajuh3cqsl99hm3cd4txt0ssqpn`,
     )
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Not 2xx response", {cause: response});
-      }
-        response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
         if (
           data.products &&
@@ -54,14 +48,18 @@ export const Scanner = () => {
           );
         } else {
           setBrandTitle('');
-          setError('Product is not found.');
+          setError(
+            `Product is not found. It is possible that we don't have it in our database... yet.`,
+          );
         }
       })
-     .catch((error) => {
+      .catch((error) => {
         console.log(error);
         setBrandTitle('');
-        setError('Product is not found');
-      }); 
+        setError(
+          `Product is not found. It is possible that we don't have it in our database... yet.`,
+        );
+      });
 
     setBarcode('');
   };
@@ -117,6 +115,7 @@ export const Scanner = () => {
   return (
     <div>
       <div className="scanner-container">
+      <div className="scanner-container-text">{text}</div>
         <div className="scanner-container-inputs">
           <button className="open-scanner" onClick={openScanner}>
             Open Scanner
@@ -153,7 +152,6 @@ export const Scanner = () => {
             Submit
           </button>
         </div>
-        <div className="scanner-container-text">{text}</div>
       </div>
     </div>
   );
