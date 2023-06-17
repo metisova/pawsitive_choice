@@ -20,6 +20,9 @@ export const BarcodeScanner = ({ paused, handleResult }) => {
     onResult(result) {
       handleResult(result.getText());
     },
+    onDecodeStart() {
+      onCameraAccess(); // Call the onCameraAccess function when decoding starts
+      },
   });
 
   return <video ref={ref} className="video" />;

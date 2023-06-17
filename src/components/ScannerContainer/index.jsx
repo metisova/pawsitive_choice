@@ -14,6 +14,7 @@ export const ScannerContainer = ({
   darkMode,
   text,
   handleResult,
+  handleCameraAccess
 }) => {
   return (
     <div>
@@ -29,7 +30,8 @@ export const ScannerContainer = ({
                 x
               </button>
               <div className="video-mid-container">
-                <BarcodeScanner paused={!scanner} handleResult={handleResult} />
+                <BarcodeScanner paused={!scanner} handleResult={handleResult}
+                onCameraAccess={handleCameraAccess} />
               </div>
             </div>
           ) : (

@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import DB from '../../db.json';
+import './style.css';
 import { ThemeContext } from '../context';
 import { ScannerContainer } from '../ScannerContainer';
 
@@ -8,6 +9,7 @@ export const Scanner = () => {
   const [brandTitle, setBrandTitle] = useState('Garnier');
   const [error, setError] = useState(null);
   const [scanner, setScanner] = useState(false);
+  const [cameraAccess, setCameraAccess] = useState(false);
 
   const handleBarcodeChange = (event) => {
     setBarcode(event.target.value);
@@ -61,6 +63,11 @@ export const Scanner = () => {
 
   const closeScanner = () => {
     setScanner(false);
+    setCameraAccess(false);
+  };
+
+  const handleCameraAccess = () => {
+    setCameraAccess(true);
   };
 
   const handleResult = (result) => {
@@ -104,6 +111,7 @@ export const Scanner = () => {
       darkMode={darkMode}
       text={text}
       handleResult={handleResult}
+      handleCameraAccess={handleCameraAccess}
     />
   );
 };

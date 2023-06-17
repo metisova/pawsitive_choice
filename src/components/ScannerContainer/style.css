@@ -116,6 +116,13 @@ hr:after {
   width: 40px;
   height: 40px;
   border-radius: 5px;
+  border: 0px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: .3s;
+}
+
+.close-video-button:hover {
+  background-color: #ca2779;
 }
 
 .video-mid-container {
@@ -133,17 +140,11 @@ hr:after {
   padding: 30px 0;
 }
 
-.brand-info {
-  font-size: 2rem;
-  text-align: center;
-  line-height: 3rem;
-}
-
 @media (max-width: 840px) {
 
   .scanner-container {
     flex-direction: column;
-    margin: 1.2rem auto 0;
+    margin: 1.8rem auto 0;
     gap: 1.5rem;
   }
 
@@ -183,10 +184,5 @@ hr:after {
     height: 40px;
     min-width: 130px;
     padding: 10px 7px;
-  }
-
-  .brand-info {
-    font-size: 1.5rem;
-    line-height: 2.2rem;
   }
 }
