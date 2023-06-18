@@ -1,5 +1,6 @@
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   mode: 'development',
@@ -52,5 +53,6 @@ module.exports = {
         { from: 'public', to: '', noErrorOnMissing: true },
       ],
     }),
+    new Dotenv(),
   ],
 };

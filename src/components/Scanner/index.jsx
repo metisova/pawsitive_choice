@@ -5,17 +5,19 @@ import { ThemeContext } from '../context';
 import { ScannerContainer } from '../ScannerContainer';
 import './style.css';
 
+export const appUrl = process.env.NODE_ENV === 'production'
+    ? process.env.API_BASE_URL_PROD
+    : process.env.API_BASE_URL_DEV
+
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
   const [brandTitle, setBrandTitle] = useState('');
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
   const [scanner, setScanner] = useState(false);
 
   const handleBarcodeChange = (event) => {
     setBarcode(event.target.value);
   };
-
-  const proxyurl = 'https://cors-anywhere.herokuapp.com/';
 
   const productFetch = (barcode) => {
     if (barcode.length <= 0 || barcode.lenght >= 14) {
@@ -26,13 +28,22 @@ export const Scanner = () => {
       return;
     }
 
-    fetch(
-      proxyurl +
-        `https://api.barcodelookup.com/v3/products?barcode=${barcode}&formatted=y&key=ivugajuh3cqsl99hm3cd4txt0ssqpn`,
-    )
+    const fetchData = async (url, { barcode }) => {
+      const params = new URLSearchParams({ barcode });
+      const response = await fetch(url + '?' + params);
+
+      return response;
+    };
+
+    fetchData(`${appUrl}/api/lookup`, { barcode })
       .then((response) => response.json())
       .then((data) => {
         const product = data.products[0];
+
+        if (!product.brand) {
+          throw new Error('Unknown brand');
+        }
+
         setBrandTitle(product.brand);
         setError(null);
       })
@@ -97,14 +108,19 @@ export const Scanner = () => {
         </span>
         <br />
         <a className="brand-url" href={brand.url} target="blank">
-          <button className="redirect-button" onClick={handleButtonClick}>
+          <button className="redirect-button" onClick={openLink}>
             Visit company's website
           </button>
         </a>
       </p>
     );
   } else if (error) {
-    text = <p>{error}</p>;
+    text = (
+      <p>
+        Product or brand is not found. It is possible that we don't have it in
+        our database... yet.
+      </p>
+    );
   }
 
   return (

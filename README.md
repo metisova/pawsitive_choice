@@ -48,5 +48,5 @@ If you have any questions or need further assistance, please contact the app dev
 - Name: Anna Kopylova
 - Email: anna.metisova@gmail.com
 
-Thank you for using the Pawsitive Choice app! Let's make positive choices and create a world of positive impact together.
+Thank you for using the Pawsitive Choice app! Let's make positive choices and create a world of positive impact together
 
