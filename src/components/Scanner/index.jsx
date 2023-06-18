@@ -7,7 +7,7 @@ import './style.css';
 
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
-  const [brandTitle, setBrandTitle] = useState('');
+  const [brandTitle, setBrandTitle] = useState('Garnier');
   const [error, setError] = useState(null);
   const [scanner, setScanner] = useState(false);
 
