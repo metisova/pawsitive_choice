@@ -10,7 +10,6 @@ export const Scanner = () => {
   const [brandTitle, setBrandTitle] = useState('');
   const [error, setError] = useState(null);
   const [scanner, setScanner] = useState(false);
-  const [cameraAccess, setCameraAccess] = useState(false);
 
   const handleBarcodeChange = (event) => {
     setBarcode(event.target.value);
@@ -64,18 +63,13 @@ export const Scanner = () => {
 
   const closeScanner = () => {
     setScanner(false);
-    setCameraAccess(false);
-  };
-
-  const handleCameraAccess = () => {
-    setCameraAccess(true);
   };
 
   const handleResult = (result) => {
     setBarcode(result);
     closeScanner();
-  }; 
-  
+  };
+
   const brand = DB[brandTitle];
 
   const darkMode = useContext(ThemeContext);
@@ -112,7 +106,6 @@ export const Scanner = () => {
       darkMode={darkMode}
       text={text}
       handleResult={handleResult}
-      handleCameraAccess={handleCameraAccess}
     />
   );
 };

@@ -125,7 +125,7 @@ hr:after {
   background-color: #ca2779;
   border: 0px;
   transition-property: background-color, border-color, color, box-shadow, filter;
-  transition-duration: .3s;
+  transition-duration: .2s;
 }
 
 .close-video-button:hover {
