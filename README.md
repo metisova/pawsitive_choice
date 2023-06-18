@@ -1,6 +1,6 @@
-# Positive Choice
+# Pawsitive Choice
 
-The Positive Choice app is a web application created as the final project of the Czechitas Web Academy 2023. It aims to increase awareness about animal testing in the beauty and cosmetics industry. The app allows users to scan product barcodes and determine if the brand carries out animal testing for its products. It provides information about the brand, such as its name, country of origin, and cruelty-free status.
+The Pawsitive Choice app is a web application created as the final project of the Czechitas Web Academy 2023. It aims to increase awareness about animal testing in the beauty and cosmetics industry. The app allows users to scan product barcodes and determine if the brand carries out animal testing for its products. It provides information about the brand, such as its name, country of origin, and cruelty-free status.
 
 ## Features
 
@@ -11,11 +11,11 @@ The Positive Choice app is a web application created as the final project of the
 
 ## Target Audience
 
-The Positive Choice app is primarily designed for mobile users, as its scanning abilities are limited by the quality of the device's camera. 
+The Pawsitive Choice app is primarily designed for mobile users, as its scanning abilities are limited by the quality of the device's camera. 
 
 ## Technologies Used
 
-The Positive Choice app is built using the following technologies:
+The Pawsitive Choice app is built using the following technologies:
 
 - React: A JavaScript library for building user interfaces.
 - React Router: A library for routing and navigation within the React application.
@@ -31,15 +31,15 @@ The Positive Choice app is built using the following technologies:
 
 ## Data Source
 
-- This project uses data from a custom JSON database that contains information about more than 90 brands and their cruelty-free status.
+This project uses data from a custom JSON database that contains information about more than 90 brands and their cruelty-free status.
 
 ## Contributing
 
-Contributions to the Positive Choice app are welcomed! If you have any suggestions, bug reports, or feature requests, please open an issue on the GitHub repository.
+Contributions to the Pawsitive Choice app are welcomed! If you have any suggestions, bug reports, or feature requests, please open an issue on the GitHub repository.
 
 ## Acknowledgments
 
-- The barcode scanning functionality is powered by the ZXing library.
+The barcode scanning functionality is powered by the ZXing library.
 
 ## Contact
 
@@ -48,5 +48,5 @@ If you have any questions or need further assistance, please contact the app dev
 - Name: Anna Kopylova
 - Email: anna.metisova@gmail.com
 
-Thank you for using the Positive Choice app! Let's make positive choices and create a world of positive impact together.
+Thank you for using the Pawsitive Choice app! Let's make positive choices and create a world of positive impact together.
 
