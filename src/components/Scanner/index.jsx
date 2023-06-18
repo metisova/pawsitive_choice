@@ -86,7 +86,8 @@ export const Scanner = () => {
     text = (
       <p className="brand-info">
         Brand: {brandTitle} <br /> Country: {brand.country}
-        <br /> Cruelty Free: {brand.crueltyFree ? 'Yes' : 'No'} <br />{' '}
+        <br /> Cruelty Free: <span className={brand.crueltyFree ? 'green' : 'red' }> {brand.crueltyFree ? 'Yes' : 'No'} </span>
+        <br />
         <a className="brand-url" href={brand.url} target="blank">
           Find out more
         </a>

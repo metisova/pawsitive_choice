@@ -12,7 +12,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: calc(50% - 80px);
+  width: calc(50% - 70px);
 }
 
 .logo {
@@ -22,7 +22,7 @@
 }
 
 .logo img {
-  width: 160px;
+  width: 140px;
 }
 
 @media (max-width: 840px) {

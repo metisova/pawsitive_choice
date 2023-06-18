@@ -8,6 +8,14 @@
   color: #ca2779;
 }
 
+.green {
+  color: #35c07a;
+}
+
+.red {
+  color: #ca2779;
+}
+
 @media (max-width: 840px) {
   .brand-info {
     font-size: 1.2rem;

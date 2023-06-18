@@ -1,10 +1,10 @@
 .scanner-container {
-  height: calc(90% - 2rem);
+  height: calc(90% - 3rem);
   width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: row;
-  margin: 4rem auto 0;
+  margin: 2rem auto;
   gap: 3rem;
   justify-content: center;
   align-items: center;
@@ -17,12 +17,12 @@
   border-radius: 30px;
   background-color: var(--background-small);
   color: var(--text-second);
-  max-width: 550px;
+  max-width: 430px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  margin: 0 2.5% 0 5%;
+  margin: 0 3rem 0 1.5rem;
   gap: 30px;
 }
 
