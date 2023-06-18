@@ -32,7 +32,7 @@ export const Scanner = () => {
       return response;
     };
 
-    fetchData(`${appUrl}/api/lookup`, { barcode })
+    fetchData(`https://pawsitive-choice-test.vercel.app/api/lookup`, { barcode })
       .then((response) => response.json())
       .then((data) => {
         const product = data.products[0];
