@@ -17,7 +17,7 @@
   border-radius: 30px;
   background-color: var(--background-small);
   color: var(--text-second);
-  max-width: 450px;
+  max-width: 470px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -139,7 +139,7 @@ hr:after {
 }
 
 .scanner-container-text {
-  font-size: 5vw;
+  font-size: 3rem;
   width: 40%;
   font-weight: bold;
   color: var(--text);
