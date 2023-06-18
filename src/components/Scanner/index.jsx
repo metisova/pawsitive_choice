@@ -67,6 +67,7 @@ export const Scanner = () => {
 
   const handleResult = (result) => {
     setBarcode(result);
+    productFetch(result);
     closeScanner();
   };
 
