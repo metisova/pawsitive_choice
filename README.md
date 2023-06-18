@@ -9,6 +9,10 @@ The Positive Choice app is a web application created as the final project of the
 - External Links: Users can find more information about a brand by clicking on an external link that redirects to the brand's website.
 - Dark Mode: The app includes a dark mode feature that allows users to switch between light and dark themes.
 
+## Target Audience
+
+The Positive Choice app is primarily designed for mobile users, as its scanning abilities are limited by the quality of the device's camera. 
+
 ## Technologies Used
 
 The Positive Choice app is built using the following technologies:
@@ -21,7 +25,9 @@ The Positive Choice app is built using the following technologies:
 
 ## Known Issues
 
-# The app utilizes an API that is currently in a free trial period. During this trial, it allows only 50 requests, and the access will expire on July 1, 2023. To continue using the app beyond that date, either a paid subscription or a custom database will be required.
+- The app utilizes an API that is currently in a free trial period. During this trial, it allows only 50 requests, and the access will expire on July 1, 2023. To continue using the app beyond that date, either a paid subscription or a custom database will be required.
+
+- There may be issues with scanning from a desktop environment depending on the the quality of the device's camera.
 
 ## Data Source
 
