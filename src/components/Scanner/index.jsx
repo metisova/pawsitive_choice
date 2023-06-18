@@ -3,14 +3,15 @@ import DB from '../../db.json';
 import './style.css';
 import { ThemeContext } from '../context';
 import { ScannerContainer } from '../ScannerContainer';
-import './style.css';
-import { appUrl } from '../../variables';
 
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
   const [brandTitle, setBrandTitle] = useState('');
   const [error, setError] = useState('');
   const [scanner, setScanner] = useState(false);
+  const [hasFetched, setHasFetched] = useState(false);
+
+  const brand = DB[brandTitle];
 
   const handleBarcodeChange = (event) => {
     setBarcode(event.target.value);
@@ -28,11 +29,13 @@ export const Scanner = () => {
     const fetchData = async (url, { barcode }) => {
       const params = new URLSearchParams({ barcode });
       const response = await fetch(url + '?' + params);
-
+      setHasFetched(true);
       return response;
     };
 
-    fetchData(`https://pawsitive-choice-test.vercel.app/api/lookup`, { barcode })
+    fetchData(`https://pawsitive-choice-test.vercel.app/api/lookup`, {
+      barcode,
+    })
       .then((response) => response.json())
       .then((data) => {
         const product = data.products[0];
@@ -61,6 +64,14 @@ export const Scanner = () => {
     }
   }, [barcode]);
 
+  useEffect(() => {
+    if (!brand && hasFetched ) {
+      setError(
+        `Product or brand is not found. It is possible that we don't have it in our database... yet.`,
+      );
+    }
+  }, [brandTitle]);
+
   const handleButtonClick = () => {
     productFetch(barcode);
   };
@@ -82,14 +93,6 @@ export const Scanner = () => {
   const openLink = () => {
     window.open(brand.url, '_blank');
   };
-
-  const brand = DB[brandTitle];
-
-  /* if (!brand && brandTitle !== null) {
-    setError(
-      `Product or brand is not found. It is possible that we don't have it in our database... yet.`,
-    );
-  } */
 
   const darkMode = useContext(ThemeContext);
 
