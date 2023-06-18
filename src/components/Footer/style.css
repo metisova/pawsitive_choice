@@ -1,11 +1,9 @@
 .footer-container {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
+  padding: 2rem;
 }
 
 .footer-text {
