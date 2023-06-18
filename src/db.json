@@ -20,6 +20,13 @@
     "url": "https://www.amorepacific.com"
   },
 
+  "Balea": {
+    "name": "Balea",
+    "country": "Germany",
+    "crueltyFree": false,
+    "url": "https://www.dm.cz/znacky/balea?wt_mc=google.ads_brand.1315960048.54849666698.352163126071&gclid=Cj0KCQjw1rqkBhCTARIsAAHz7K3811bhv5XRbAK8cvsrMuljoO_TdsyvfbGa027J4XpS4r9zI5JS-8kaAkrsEALw_wcB"
+  },
+
   "Benefit Cosmetics": {
     "name": "Benefit Cosmetics",
     "country": "United States",
@@ -76,6 +83,13 @@
     "url": "https://www.catrice.eu/"
   },
 
+  "CeraVe": {
+    "name": "CeraVe",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.cerave.com/"
+  },
+
   "Chanel": {
     "name": "Chanel",
     "country": "France",
@@ -104,6 +118,13 @@
     "url": "https://www.clinique.com/"
   },
 
+  "Colgate": {
+    "name": "Colgate",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.colgate.com/"
+  },
+
   "ColourPop": {
     "name": "ColourPop",
     "country": "United States",
@@ -123,6 +144,13 @@
     "country": "United States",
     "crueltyFree": false,
     "url": "https://www.covergirl.com/"
+  },
+
+  "Dermacol": {
+    "name": "Dermacol",
+    "country": "Czech Republic",
+    "crueltyFree": false,
+    "url": "https://www.dermacolusa.com/"
   },
 
   "Dior": {
@@ -165,6 +193,13 @@
     "country": "United States",
     "crueltyFree": true,
     "url": "https://www.elfcosmetics.com/"
+  },
+
+  "Elmex": {
+    "name": "Elmex",
+    "country": "Switzerland",
+    "crueltyFree": false,
+    "url": "https://www.elmex.com/"
   },
 
   "Essence": {
@@ -272,6 +307,13 @@
     "url": "https://jeffreestarcosmetics.com/"
   },
 
+  "Kerastase": {
+    "name": "Kerastase",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.kerastase-usa.com/"
+  },
+
   "Kiehl's": {
     "name": "Kiehl's",
     "country": "USA",
@@ -305,6 +347,13 @@
     "country": "United States",
     "crueltyFree": false,
     "url": "https://www.lauramercier.com/"
+  },
+
+  "L'Occitane": {
+    "name": "L'Occitane",
+    "country": "France",
+    "crueltyFree": false,
+    "url": "https://www.loccitane.com/"
   },
 
   "L'Oréal": {
@@ -384,6 +433,13 @@
     "url": "https://www.missha.com"
   },
 
+  "Miss Sporty": {
+    "name": "Miss Sporty",
+    "country": "United Kingdom",
+    "crueltyFree": false,
+    "url": "https://www.miss-sporty.com/"
+  },
+
   "Morphe": {
     "name": "Morphe",
     "country": "United States",
@@ -447,6 +503,13 @@
     "url": "https://www.olay.com"
   },
 
+  "Old Spice": {
+    "name": "Old Spice",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.oldspice.com/"
+  },
+
   "OPI": {
     "name": "OPI",
     "country": "United States",
@@ -480,6 +543,13 @@
     "country": "Czech Republic",
     "crueltyFree": true,
     "url": "https://www.purityvision.cz/"
+  },
+
+  "Redken": {
+    "name": "Redken",
+    "country": "United States",
+    "crueltyFree": false,
+    "url": "https://www.redken.com/"
   },
 
   "Revlon": {
@@ -524,6 +594,13 @@
     "url": "https://www.ryor.cz/"
   },
 
+  "Saloos": {
+    "name": "Saloos",
+    "country": "Czech Republic",
+    "crueltyFree": true,
+    "url": "https://www.saloos.cz/"
+  },
+
   "Schwarzkopf": {
     "name": "Schwarzkopf",
     "country": "Germany",
@@ -550,6 +627,13 @@
     "country": "United States",
     "crueltyFree": false,
     "url": "https://www.smashbox.com/"
+  },
+
+  "Syoss": {
+    "name": "Syoss",
+    "country": "Germany",
+    "crueltyFree": false,
+    "url": "https://www.syoss.cz/"
   },
 
   "Tarte Cosmetics": {
@@ -585,6 +669,13 @@
     "country": "United States",
     "crueltyFree": false,
     "url": "https://www.toofaced.com/"
+  },
+
+  "TRESemmé": {
+    "name": "TRESemmé",
+    "country": "United States",
+    "crueltyFree": true,
+    "url": "https://www.tresemme.com/cz/home.html"
   },
 
   "Urban Decay": {
