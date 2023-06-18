@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BarcodeScanner } from '../BarcodeScanner';
 import scannerIconWhite from '../../img/qr-code-scan-light.png';
 import scannerIconDark from '../../img/qr-code-scan.png';
@@ -17,6 +17,18 @@ export const ScannerContainer = ({
   text,
   handleResult,
 }) => {
+  const [showCloseButton, setShowCloseButton] = useState(false);
+
+  useEffect(() => {
+    let timer;
+    if (scanner) {
+      timer = setTimeout(() => {
+        setShowCloseButton(true);
+      }, 1000);
+    }
+    return () => clearTimeout(timer);
+  }, [scanner]);
+
   return (
     <div>
       <div className="scanner-container">
@@ -27,13 +39,15 @@ export const ScannerContainer = ({
           </button>
           {scanner ? (
             <div className="video-container">
-              <button onClick={closeScanner} className="close-video-button">
-                <img
-                  className="closeButtonIcon"
-                  src={darkMode ? crossIconWhite : crossIconDark}
-                  alt="Cross icon"
-                />
-              </button>
+              {showCloseButton && (
+                <button onClick={closeScanner} className="close-video-button">
+                  <img
+                    className="closeButtonIcon"
+                    src={darkMode ? crossIconWhite : crossIconDark}
+                    alt="Cross icon"
+                  />
+                </button>
+              )}
               <div className="video-mid-container">
                 <BarcodeScanner paused={!scanner} handleResult={handleResult} />
               </div>
