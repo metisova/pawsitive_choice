@@ -71,6 +71,10 @@ export const Scanner = () => {
     closeScanner();
   };
 
+  const openLink = () => {
+    window.open(brand.url, '_blank');
+  };
+
   const brand = DB[brandTitle];
 
   const darkMode = useContext(ThemeContext);
@@ -86,10 +90,16 @@ export const Scanner = () => {
     text = (
       <p className="brand-info">
         Brand: {brandTitle} <br /> Country: {brand.country}
-        <br /> Cruelty Free: <span className={brand.crueltyFree ? 'green' : 'red' }> {brand.crueltyFree ? 'Yes' : 'No'} </span>
+        <br /> Cruelty Free:{' '}
+        <span className={brand.crueltyFree ? 'green' : 'red'}>
+          {' '}
+          {brand.crueltyFree ? 'Yes' : 'No'}{' '}
+        </span>
         <br />
         <a className="brand-url" href={brand.url} target="blank">
-          Find out more
+          <button className="redirect-button" onClick={handleButtonClick}>
+            Visit company's website
+          </button>
         </a>
       </p>
     );

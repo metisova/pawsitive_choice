@@ -1,11 +1,11 @@
 .scanner-container {
-  height: calc(90% - 3rem);
-  width: 100%;
+  height: calc(90% - 5rem);
+  width: 85%;
   overflow: hidden;
   display: flex;
   flex-direction: row;
   margin: 2rem auto;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -17,7 +17,7 @@
   border-radius: 30px;
   background-color: var(--background-small);
   color: var(--text-second);
-  max-width: 430px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -51,7 +51,7 @@
 
 .open-scanner:hover,
 .submit-button:hover {
-  color: var(--text);
+  color: var(--background-small);
   background-color: var(--text-second);
 }
 
@@ -143,7 +143,7 @@ hr:after {
   width: 40%;
   font-weight: bold;
   color: var(--text);
-  margin: 0 5% 0 2.5%;
+  margin: 0 1.5rem 0 3rem;;
   padding: 30px 0;
 }
 
