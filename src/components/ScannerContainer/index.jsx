@@ -16,6 +16,7 @@ export const ScannerContainer = ({
   darkMode,
   text,
   handleResult,
+  handleCameraAccess
 }) => {
   const [showCloseButton, setShowCloseButton] = useState(false);
 
@@ -49,7 +50,8 @@ export const ScannerContainer = ({
                 </button>
               )}
               <div className="video-mid-container">
-                <BarcodeScanner paused={!scanner} handleResult={handleResult} />
+                <BarcodeScanner paused={!scanner} handleResult={handleResult}
+                onCameraAccess={handleCameraAccess} />
               </div>
             </div>
           ) : (
