@@ -27,7 +27,6 @@ export const Scanner = () => {
     }
 
     fetch(
-      proxyurl +
         `https://api.barcodelookup.com/v3/products?barcode=${barcode}&formatted=y&key=ivugajuh3cqsl99hm3cd4txt0ssqpn`,
     )
       .then((response) => response.json())
