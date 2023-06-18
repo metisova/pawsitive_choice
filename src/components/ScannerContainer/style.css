@@ -1,6 +1,6 @@
 .scanner-container {
   height: calc(90% - 5rem);
-  width: 85%;
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: row;
@@ -158,11 +158,12 @@ hr:after {
   .scanner-container-inputs {
     margin: 0 5% 0 5%;
     gap: 20px;
+    max-width: 400px;
   }
 
   .scanner-container-text {
     font-size: 5vw;
-    width: 80%;
+    width: 83%;
     font-weight: bold;
     color: var(--text);
     margin: 0 5% 0 5%;
