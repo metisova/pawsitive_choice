@@ -4,10 +4,7 @@ import './style.css';
 import { ThemeContext } from '../context';
 import { ScannerContainer } from '../ScannerContainer';
 import './style.css';
-
-export const appUrl = process.env.NODE_ENV === 'production'
-    ? process.env.API_BASE_URL_PROD
-    : process.env.API_BASE_URL_DEV
+import { appUrl } from '../../variables';
 
 export const Scanner = () => {
   const [barcode, setBarcode] = useState('');
@@ -20,7 +17,7 @@ export const Scanner = () => {
   };
 
   const productFetch = (barcode) => {
-    if (barcode.length <= 0 || barcode.lenght >= 14) {
+    if (barcode.length <= 0 || barcode.length >= 14) {
       setBrandTitle('');
       setError(
         'Wrong barcode format. Please check the lenght of your barcode.',
@@ -87,6 +84,12 @@ export const Scanner = () => {
   };
 
   const brand = DB[brandTitle];
+
+  /* if (!brand && brandTitle !== null) {
+    setError(
+      `Product or brand is not found. It is possible that we don't have it in our database... yet.`,
+    );
+  } */
 
   const darkMode = useContext(ThemeContext);
 

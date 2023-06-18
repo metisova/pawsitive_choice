@@ -8,6 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 const apiKey = process.env.API_KEY;
+console.log(apiKey);
 
 app.use(cors());
 
