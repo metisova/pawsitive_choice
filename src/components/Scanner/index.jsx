@@ -123,8 +123,7 @@ export const Scanner = () => {
   } else if (error) {
     text = (
       <p>
-        Product or brand is not found. It is possible that we don't have it in
-        our database... yet.
+        {error}
       </p>
     );
   }
