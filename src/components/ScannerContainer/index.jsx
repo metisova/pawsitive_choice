@@ -71,7 +71,7 @@ export const ScannerContainer = ({
             value={barcode}
             onChange={handleBarcodeChange}
           />
-          <button className="submit-button" onClick={handleButtonClick}>
+          <button className="submit-button" onClick={handleButtonClick} disabled={!barcode}>
             Submit
           </button>
         </div>
